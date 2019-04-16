@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title></title>
+            <link rel="stylesheet" href="">
+        </head>
+    <body>
+        <script>
+    console.log(createTree(0))
+    function createTree(num){
+
+        // 生成深度为5的树
+        if(num == 5){
+            return null;
+        }
+        var tree = {
+            name:++num+"级",
+            //递归生成子级
+            children:createTree(num)
+        };
+        return tree;
+    }
+</script>
+    </body>
+</html>

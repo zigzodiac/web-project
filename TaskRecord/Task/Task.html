@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+<!--    -->
+<!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
+<!--    <link href="css/font-awesome.min.css" rel="stylesheet">-->
+
+
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/datepicker.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+<!--    ----------------->
+    <script src="Task.js"></script>
+    <link rel = "stylesheet" type="text/css" href="Task.css">
+    <title>Title</title>
+
+    <!--添加datepicker支持-->
+
+
+
+</head>
+<body>
+<div id="TaskContainer"></div>
+<!--添加主任务div-->
+<div id="light" class="white_content">
+    <div class = 'add_task_title' id="add_task_title_id">Add text</div>
+    <div class="add_task_detail" id="add_task_detail_id">
+        <span class ="tree_view_text">Property</span>
+        <br>
+        <form>
+            Name:
+            <label>
+                <input id ="task_name_id" type="text" name="task_name">
+            </label>
+        </form>
+    </div>
+    <div class="add_task_button" id="add_task_button_id">
+        <input type="button" value="确认" class="btn_confirm" id="btn_confirm_id" onclick ="sendCode(this)" />
+        <input type="button" value="取消" class="btn_cancel" id="btn_cancel_id" onclick ="quit()" />
+    </div>
+</div>
+<!---->
+<!--添加子任务div-->
+<div id="child_task_id" class="child_task_detail">
+
+    <div class = 'add_task_title' id="child_task_title_id">Add text</div>
+    <div class="add_task_detail" id="child_task_detail_id">
+        Property
+        <br>
+        <form>
+            Name:
+            <label>
+                <input id ="child_task_name_id" type="text" name="task_name">
+            </label>
+            <br>
+            Date:
+            <label>
+                <input type="text" name="date" id="date" />
+            </label>
+        </form>
+    </div>
+    <div class="add_task_button" id="child_task_button_id">
+        <input type="button" value="确认" class="btn_confirm" id="child_btn_confirm_id" onclick ="send_task(this)" />
+        <input type="button" value="取消" class="btn_cancel" id="child_btn_cancel_id" onclick ="quit()" />
+    </div>
+</div>
+<div id="fade" class="black_overlay"></div>
+</body>
+</html>

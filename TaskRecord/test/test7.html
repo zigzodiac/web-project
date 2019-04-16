@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a class="button border-green button-little" onclick="javasrcipt:ShowDiv('MyDiv','fade')" >新增二级分类</a>
+
+<!--弹出层时背景层DIV---start-->
+
+<div id="fade" class="black_overlay"></div>
+
+<div id="MyDiv" class="white_content">
+
+    <div style="text-align: right; cursor: default; margin-top:10px;margin-bottom:10px;">
+
+        <span style="font-size: 16px; margin-right: 17px; color: #56BE2D; font-weight: 600;cursor:pointer;"  onclick="CloseDiv('MyDiv','fade')">关闭</span>
+
+    </div>
+
+    <div class="itempanel" style="    margin-left: 13%;">
+
+        <div class="floatleft title" style="text-align: left;">二级分类名称：</div>
+
+        <div class="floatleft editor" style="font-size:16px;height: 24px;line-height: 24px;"><input type="text" id="label" name="label" placeholder="请输入二级分类名称"/></div>
+
+        <div class="floatleft message"></div>
+
+        <div class="clear"></div>
+
+    </div>
+
+    <HR style="FILTER: alpha(opacity = 100,finishopacity=0,style=3); margin-top: 39px;" width="90%" color=#ddd SIZE=2>
+
+    <div style="margin-bottom: 23px; margin-top: 23px; margin-left: 23%;">
+
+        <input type="button" class="greenbutton2" style="width: 123px;margin-left: 30px;" onclick="javasrcipt:goToAdd()" value="添加" style="width: 123px; margin-left: 20%; ">
+
+        <input type="button" class="greenbutton2" style="width: 123px;margin-left: 30px;" onclick="CloseDiv('MyDiv','fade')" value="取消" style="width: 123px; margin-left: 20%; ">
+
+    </div>
+
+</div>
+
+<!--弹出层时背景层DIV---end-->
+
+</body>
+</html>

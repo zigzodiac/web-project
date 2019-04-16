@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap-head {
+            margin: 5px;
+            text-align: center;
+            line-height: 50px;
+            width: 600px;
+            height: 50px;
+            border: 1px solid #ccc;
+            background: gray;
+        }
+
+        .wrap-head input {
+            width: 14%;
+            height: 40px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        #warp-main div {
+            margin: 5px;
+            border: 1px solid gray;
+            height: 80px;
+            width: 600px;
+            position: relative;
+            background: gray;
+            text-align: center;
+            line-height: 80px;
+        }
+    </style>
+
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+
+            //保存所有数字
+            var numArr = [];
+
+            function random(min, max) {
+                if (min > max) {
+                    var te = min;
+                    min = max;
+                    max = te;
+                }
+                //floor是像下取整,例如floor(3,9)的结果为3(不遵循四舍五入)ceil()是向上取整
+                return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            function randColor() {
+                return '#' + Math.floor(Math.random() * 0XFFFFFF).toString(16);
+            }
+
+            $("#add").click(function () {
+                var num = random(-50, 50);
+                numArr.push(num);
+                $("#warp-main").append($("<div>").html(num).css({"background-color": randColor}));
+            });
+
+            $("#delete").click(function () {
+
+                var num = $("#warp-main:last-child").html();
+                var index = numArr.indexOf(parseInt(num));
+
+                numArr.splice(index, 1);
+                $("#warp-main :last-child").animate({"marginLeft":"100%"},function () {
+                    this.remove()
+                });
+            });
+
+            $("#less").click(function () {
+                $("#warp-main").empty();
+                for (var i = 0; i < numArr.length; i++){
+                    if (numArr[i] <= 0){
+                        $("#warp-main").append($("<div>").html(numArr[i]).css({"background-color": randColor()}));
+
+                    }
+                }
+            });
+
+            $("#bigger").click(function () {
+                $("#warp-main").empty();
+
+                $(numArr).each(function (i) {
+                    if (numArr[i] > 0){
+                        $("#warp-main").append($("<div>").html(numArr[i]).css({"background-color":randColor()}));
+                    }
+
+                });
+
+            });
+
+            $("#ref").click(function () {
+                numArr = [];
+                var showNum = $("#warp-main>div").length;
+                for (var i = 0; i < showNum; i++){
+                    numArr[i] = random(-50, 50);
+                }
+
+                $("#warp-main>div").each(function (i) {
+                    $(this).html(numArr[i]).css({"background-color":randColor()});
+                })
+
+            });
+
+            $("#all").click(function () {
+                $("#warp-main").empty();
+                for (var i = 0; i < numArr.length; i++){
+                    $("#warp-main").append($("<div>").html(numArr[i]).css({"background":randColor()}));
+                }
+
+            });
+
+
+        });
+
+
+    </script>
+
+</head>
+<body>
+<div class="wrap">
+    <div class="wrap-head">
+        <input type="button" id="add" value="添加">
+        <input type="button" id="delete" value="删除">
+        <input type="button" id="less" value="小于0">
+        <input type="button" id="bigger" value="大于0">
+        <input type="button" id="ref" value="刷新">
+        <input type="button" id="all" value="显示全部">
+    </div>
+
+    <div id="warp-main"></div>
+
+</div>
+
+
+</body>
+</html>!

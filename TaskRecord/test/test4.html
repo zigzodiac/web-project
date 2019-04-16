@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=" utf-8">
+    <meta name="author" content="http://www.softwhy.com/" />
+    <title>蚂蚁部落</title>
+    <script>
+        function createTable(rows,lines){
+            this.rows=rows;
+            this.lines=lines;
+            var Body=document.getElementById('body');
+            var Table=document.createElement('table');
+            Table.setAttribute('border','1');
+            for(var i=0;i<this.rows;i++){
+                var lRow=document.createElement('tr');
+                for(var j=0;j<this.lines;j++){
+                    var textNode=document.createTextNode(i+','+j);
+                    var lLine=document.createElement('td');
+                    lLine.appendChild(textNode);
+                    lRow.appendChild(lLine);
+                }
+                Table.appendChild(lRow);
+            }
+            Body.appendChild(Table);
+        }
+        window.onload=function(){
+            createTable(10,10);
+        }
+    </script>
+</head>
+<body >
+<div id="body"></div>
+</body>
+</html>

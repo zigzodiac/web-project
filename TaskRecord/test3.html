@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="test.js"></script>
+    <link type="text/css" rel="styleSheet" href="test.css"> </head> <body>
+<div class="tab">
+    <ul>
+        <li class="active">国内新闻</li>
+        <li>国际新闻</li>
+        <li>经济新闻</li>
+    </ul>
+    <div class="tab-content">
+        <div class="local-new" style="display:block">
+            <fieldset>
+                <legend>登录</legend>
+                姓名：<input type="text"><br><br>
+                性别:<input type="radio" name="sex" id="man"><label for="man">男</label>
+                <input type="radio" name="sex" id="woman"><label for="woman">女</label>
+                <input type="radio" name="sex" id="secrect"><label for="secrect">保密</label><br><br>
+                <input type="checkbox" name="" id="agree"><label for="agree">我同意以上协议</label><br><br>
+                <input type="button" id="prestep" value="上一步">
+                <input type="button" id="nextstep" value="下一步" disabled>
+            </fieldset>
+        </div>
+        <div class="international-new" style="display:block">国际新闻</div>
+        <div class="ecology-new" style="display:block">经济新闻</div>
+    </div>
+</div>
+
+</body>
+</html>
