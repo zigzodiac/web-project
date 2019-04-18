@@ -23,17 +23,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Task/Task.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+            <state>
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+            <state relative-caret-position="95">
+              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -41,17 +41,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2925">
-              <caret line="274" column="16" lean-forward="true" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="16" />
+            <state relative-caret-position="755">
+              <caret line="210" selection-start-line="210" selection-start-column="2" selection-end-line="212" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9044">
+              <caret line="476" column="29" lean-forward="true" selection-start-line="476" selection-start-column="29" selection-end-line="476" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.js">
+        <entry file="file://$PROJECT_DIR$/TaskManage/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="317" column="40" lean-forward="true" selection-start-line="317" selection-start-column="40" selection-end-line="317" selection-end-column="40" />
+            <state relative-caret-position="494">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="41" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,18 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lab1</find>
-      <find>btn-success</find>
-      <find>icon</find>
-      <find>last</find>
-      <find>id</find>
-      <find>tree_subtract_icon</find>
-      <find>tree_file_subtract_icon</find>
-      <find>light</find>
-      <find>sendCode</find>
-      <find>tree_header_add_icon_id</find>
-      <find>date_header_month</find>
-      <find>white-space</find>
       <find>date_header_day_all_id</find>
       <find>date_view_day_all</find>
       <find>css</find>
@@ -90,9 +90,26 @@
       <find>child_num</find>
       <find>insert</find>
       <find>insert_position</find>
-      <find>alert</find>
       <find>Add_day</find>
       <find>row</find>
+      <find>date_view_row_month</find>
+      <find>add_day</find>
+      <find>hide</find>
+      <find>date_view</find>
+      <find>mouse_incident</find>
+      <find>date_start_date</find>
+      <find>strDateEnd</find>
+      <find>strDateStart</find>
+      <find>id</find>
+      <find>append</find>
+      <find>row_count</find>
+      <find>alert</find>
+      <find>add</find>
+      <find>global</find>
+      <find>task</find>
+      <find>global.div_status</find>
+      <find>distance_days</find>
+      <find>block</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -127,7 +144,9 @@
         <option value="$PROJECT_DIR$/TaskManage/Task.js" />
         <option value="$PROJECT_DIR$/Task/Task.html" />
         <option value="$PROJECT_DIR$/TaskManage/TaskRecord.html" />
+        <option value="$PROJECT_DIR$/TaskManage/testhover2.html" />
         <option value="$PROJECT_DIR$/TaskManage/TaskRecord.css" />
+        <option value="$PROJECT_DIR$/TaskManage/test.html" />
         <option value="$PROJECT_DIR$/TaskManage/TaskRecord.js" />
       </list>
     </option>
@@ -142,17 +161,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="TaskRecord" type="b2602c69:ProjectViewProjectNode" />
               <item name="TaskRecord" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TaskRecord" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TaskRecord" type="462c0819:PsiDirectoryNode" />
-              <item name="Task" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TaskRecord" type="b2602c69:ProjectViewProjectNode" />
@@ -169,13 +184,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/WebstormProjects/Task2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
   </component>
   <component name="RecentsManager">
@@ -256,11 +270,16 @@
       <workItem from="1554946135572" duration="16631000" />
       <workItem from="1555032294481" duration="28483000" />
       <workItem from="1555292060215" duration="49829000" />
+      <workItem from="1555466801394" duration="7643000" />
+      <workItem from="1555474747998" duration="19615000" />
+      <workItem from="1555551000981" duration="4422000" />
+      <workItem from="1555555471102" duration="14267000" />
+      <workItem from="1555573864829" duration="5738000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243837000" />
+    <option name="totallyTimeSpent" value="295522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -308,37 +327,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mytest/mytest4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mytest/mystyles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" selection-start-line="23" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/test2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -616,31 +604,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Task/Task.html">
+    <entry file="file://$PROJECT_DIR$/TaskManage/js/jquery-1.11.0.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.js">
+    <entry file="file://$PROJECT_DIR$/TaskManage/js/jquery-ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="317" column="40" lean-forward="true" selection-start-line="317" selection-start-column="40" selection-end-line="317" selection-end-column="40" />
+        <state relative-caret-position="152">
+          <caret line="11" column="15114" selection-start-line="11" selection-start-column="15114" selection-end-line="11" selection-end-column="15114" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManage/testhover2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="835">
+          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManage/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task/Task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManage/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2925">
-          <caret line="274" column="16" lean-forward="true" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="16" />
+        <state relative-caret-position="755">
+          <caret line="210" selection-start-line="210" selection-start-column="2" selection-end-line="212" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="55" column="12" lean-forward="true" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
+        <state relative-caret-position="95">
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TaskManage/TaskRecord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9044">
+          <caret line="476" column="29" lean-forward="true" selection-start-line="476" selection-start-column="29" selection-end-line="476" selection-end-column="29" />
         </state>
       </provider>
     </entry>

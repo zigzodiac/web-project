@@ -99,7 +99,6 @@
     box-sizing: border-box;
     height: 50%;
     width: 100%;
-    background-color: #aec0a0;
     white-space: nowrap;
 }
 .date_header_month{
@@ -114,7 +113,6 @@
     border-right-color: #00FF00;
     border-bottom: 1px crimson;
     border-bottom-style: outset;
-    background-color: #aec0a0;
 }
 .date_header_day_all{
     height: 50%;
@@ -138,7 +136,7 @@
     text-align: center;
     border-right: 1px #ff7311;
     border-right-style: outset;
-    background-color: #b6b8b7;
+    background-color: #878988;
 }
 .tree_text{
     display: inline-block;
@@ -153,14 +151,16 @@
 .date_view_row{
     height: 20px;
     width: 100%;
-    background-color: #aec0a0;
+    background-color: #838383;
     white-space: nowrap;
+
 }
 .date_view_row_month{
     display: inline-block;
+    margin-top: 0;
     height: 100%;
     width: 450px;
-    border-bottom: 1px crimson;
+    border-bottom-width: 1px;
     border-bottom-style: outset;
     white-space: nowrap;
 }
@@ -173,11 +173,44 @@
     text-align: center;
     border-right: 1px #ff7311;
     border-right-style: outset;
-    background-color: #000000;
 }
-.date_view_row_month_day:hover{
-    background: #fafa25;
+.date_view_row_block{
+    position: absolute;
+    margin-top: 0;
+    left: 0;
+    display: inline-block;
+    height: 20px;
+    font-size: 2px;
+    text-align: center;
+    background: rgba(255, 232, 63, 0.5);
+    overflow: hidden;
+    border-left: 6px;
+    border-right: 6px;
+    border: #ffe83f;
+
 }
+.date_view_day_block_left{
+    float: left;
+    display: inline-block;
+    height: 100%;
+    width: 7px;
+    font-size: 2px;
+    text-align: center;
+    background: rgba(255, 232, 63, 0.5);
+}
+.date_view_day_block_right{
+    float: right;
+    display: inline-block;
+    height: 100%;
+    width: 7px;
+    font-size: 2px;
+    text-align: center;
+    background: rgba(255, 232, 63, 0.5);
+
+}
+/*.date_view_row_month_day:hover{*/
+/*    background: #fafa25;*/
+/*}*/
 /*-----------------------------------------------*/
 /*任务菜单行元素*/
 .tree_view_row{
@@ -187,10 +220,12 @@
     /*border-bottom-color: rgb(88, 95, 104);*/
     /*border-right: 1px solid #ff5e79;*/
     /*border-right-color: rgb(255, 94, 121);*/
-    color: #d5dbef;
-    width:100%;
+    color: #878988;
+    width:249px;
     height:19px;
     border-bottom: 1px solid #8dc083;
+    border-right: 1px #ff7311;
+    border-right-style:outset;
     /*box-sizing: border-box;*/
 }
 .tree_view_row:hover{
@@ -299,6 +334,22 @@
     z-index:1002;
     overflow: auto;
     border-radius:15px 15px 15px 15px;
+}
+.property{
+    display: block;
+    width: 100%;
+    height: 50px;
+    font-size: larger;
+    background-color: #f1fdfe;
+    border-bottom-width: 2px;
+    border-bottom-color:#0E3E5E;
+}
+.detail{
+    display: block;
+    width: 100%;
+    height: 120px;
+    font-size: larger;
+    background-color: #f1fdfe;
 }
 .add_task_title{
     display: block;

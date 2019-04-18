@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.min.js"></script>
 <!--    -->
 <!--    <link href="css/bootstrap.min.css" rel="stylesheet">-->
 <!--    <link href="css/font-awesome.min.css" rel="stylesheet">-->
@@ -22,8 +21,6 @@
     <title>Title</title>
 
     <!--添加datepicker支持-->
-
-
 
 </head>
 <body>
@@ -49,22 +46,22 @@
 <!---->
 <!--添加子任务div-->
 <div id="child_task_id" class="child_task_detail">
-
     <div class = 'add_task_title' id="child_task_title_id">Add text</div>
     <div class="add_task_detail" id="child_task_detail_id">
-        Property
-        <br>
-        <form>
-            Name:
-            <label>
-                <input id ="child_task_name_id" type="text" name="task_name">
-            </label>
-            <br>
-            Date:
-            <label>
-                <input type="text" name="date" id="date" />
-            </label>
-        </form>
+        <div class = "property" id ='property-id'>Property</div>
+        <div class = "detail" id = 'detail_id'>
+            <form>
+                Name:
+                <label>
+                    <input id ="child_task_name_id" type="text" name="task_name">
+                </label>
+                <br>
+                Date:
+                <label>
+                    <input type="text" name="date" id="task_date_id" />
+                </label>
+            </form>
+        </div>
     </div>
     <div class="add_task_button" id="child_task_button_id">
         <input type="button" value="确认" class="btn_confirm" id="child_btn_confirm_id" onclick ="send_task(this)" />
