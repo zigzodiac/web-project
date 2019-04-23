@@ -109,10 +109,12 @@ function send_task() {
     // new_tree_row.slid_block();
     if (that!== create_Main_task) {
         that.child_object.push(new_tree_row);
-        that.child_item.push(that.item_id[0]+"_"+that.child_num);  //入数组 列表上的兄弟
+        that.child_item.push(that.item_id[0]+"_"+that.child_num);
+        new_tree_row.parent_object.alter_father_sliding_length();
+       //入数组 列表上的兄弟
     }
     else{
-        console.log("Main_task");
+        // console.log("Main_task");
         that.index++;
         that.row_num++;
     }
@@ -134,6 +136,7 @@ $(function(){
     $("#tree_header_add_icon_id").click(function () {
         document.getElementById('child_task_id').style.display='block';
         document.getElementById('fade').style.display='block';
+        $("#task_need_time_id").hide();
         $("input[name='task_name'] ").val("");
     });
 });

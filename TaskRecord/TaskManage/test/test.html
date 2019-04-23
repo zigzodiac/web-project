@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .draggable {background-color:green; width: 90px; height: 80px; padding: 5px; float: left; margin: 0 10px 10px 0; font-size: .9em; }
+        .one{
+            /* 继承.box高度 */
+            background: -webkit-linear-gradient(top, transparent 19px, yellow 20px),-webkit-linear-gradient(left, transparent 14px, yellow 15px);
+            background-size: 15px 20px}
+    /*    -webkit-linear-gradient(left, transparent 19px, yellow 20px);*/
+    </style>
+    <title>背景</title>
+</head>
+<body>
+<div id="container" class = 'one' style="background-color:gray;height:300px">
+    <div id="draggable1" class="draggable">
+        <p>吸附到其他可拖拽元素</p>
+    </div>
+
+    <div id="draggable2" class="draggable">
+        <p>吸附到容器</p>
+    </div>
+
+    <div id="draggable3" class="draggable">
+        <p>吸附到网格(30x30)</p>
+    </div>
+</div><!--container-->
+
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+<!--<script>-->
+<!--    $(function() {-->
+<!--        $("#draggable1").draggable({ snap: true });-->
+<!--        $("#draggable2").draggable({ snap: "#container"});-->
+<!--        $("#draggable3").draggable({grid: [30,30]});-->
+<!--    });-->
+<!--</script>-->
+</body>
+</html>
