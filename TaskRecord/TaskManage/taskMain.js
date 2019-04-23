@@ -128,12 +128,20 @@ function quit(){
     $("#child_task_id").css("display","none");
     // document.getElementById('child_task_id').style.display='none';
 }
+function delete_task(){
+}
 $(function(){
     initialization();
     add_time_header(task_date);
     $( "#task_date_id" ).daterangepicker();
 
     $("#tree_header_add_icon_id").click(function () {
+        let delete_task = $("#delete_task_id");
+        delete_task.css('visibility', 'hidden');
+        // if(delete_task.is(":visible")){
+        //
+        // }
+
         document.getElementById('child_task_id').style.display='block';
         document.getElementById('fade').style.display='block';
         let task_need_time=$("#task_need_time_id");

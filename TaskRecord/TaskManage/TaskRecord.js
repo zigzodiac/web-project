@@ -117,6 +117,8 @@ class Add_child_task {
                 alert ("目录层级不应超过最大数","The directory level should not exceed the maximum number");
             }
             else{
+                let delete_task = $("#delete_task_id");
+                delete_task.css('visibility', 'hidden');
                 $("#fade").css("display","block");
                 $("#child_task_id").css("display","block");
                 let task_need_time=$("#task_need_time_id");
@@ -196,7 +198,7 @@ class Add_child_task {
         this.div_width = days*15;
 
         let sliding_block = "<div class='date_view_row_block' id ='"+ this.date_id + "_block'></div>";
-        let day_block_left = "<div class ='ui-resizable-handle ui-resizable-w' id='" + this.date_id + "_day_block_left'></div>";
+        let day_block_left = "<div class ='ui-resizable-handle ui-resizable-w' id='" + this.date_id + "_day_block_left' data-of_object= 'that'></div>";
         let day_block_right = "<div class ='ui-resizable-handle ui-resizable-e' id='" + this.date_id + "_day_block_right'></div>";
 
 
@@ -341,6 +343,15 @@ class Add_child_task {
                 sliding_block_handle_e.css("background","rgba(158,160,159,0.5)")
             }
         );
+        row_block.on("dblclick",function(){
+            let delete_task = $("#delete_task_id");
+            if(delete_task.is(":hidden")){
+                delete_task.css('visibility', 'visible')
+            }
+            document.getElementById('child_task_id').style.display='block';
+            document.getElementById('fade').style.display='block';
+        });
+
         row_block.draggable({
             create: function (event, ui) {
             },
@@ -405,6 +416,20 @@ class Add_child_task {
                 // alter("father_task's date alter function not yet append please ")
                 // that.parent_object.alter_date(that.task_date[0],that.task_date[1]);
             }
+        });
+        let flag = $("#"+this.item_id[6]);
+
+        flag.hover(function() {
+            let dialog_left =flag.position().left+300;
+            console.log(flag.position());
+            console.log(flag);
+
+            let dialog_top = flag.position().top+80;
+            // $(".popup_dialog").css('visibility', 'visible');
+            console.log("hover1111",dialog_top,dialog_left);
+            $(".popup_dialog").animate({opacity: "show", left: dialog_left, top: dialog_top}, "slow");
+        }, function() {
+            $(".popup_dialog").animate({opacity: "hide", top: "-85"}, "fast");
         });
     }
 

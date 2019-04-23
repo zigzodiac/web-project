@@ -394,11 +394,20 @@
     background-color: #4a5563;
     font-size: larger;
 }
+.btn_delete{
+    display: inline-block;
+    margin-top: 10px;
+    height: 30px;
+    margin-left: 20px;
+    width: 60px;
+    background-color: #95d9f5;
+    font-size: medium;
+}
 .btn_confirm{
     display: inline-block;
     margin-top: 10px;
     height: 30px;
-    margin-left: 50px;
+    margin-left: 40px;
     width: 60px;
     background-color: #95d9f5;
     font-size: medium;
@@ -407,9 +416,22 @@
     display: inline-block;
     margin-top: 10px;
     height: 30px;
-    margin-left: 50px;
+    margin-left: 10px;
     width: 60px;
     background-color: #95d9f5;
     font-size: medium;
+}
+.popup_dialog{
+    background: url('images/hover.png') no-repeat;
+    width: 180px;
+    height: 45px;
+    position: absolute;
+    top: -85px;
+    left: -15px;
+    text-align: center;
+    padding: 20px 12px 10px;
+    font-style: normal;
+    z-index: 2;
+    display: none;
 }
 /*-------------------*/
