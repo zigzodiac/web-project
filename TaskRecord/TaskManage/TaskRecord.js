@@ -119,6 +119,10 @@ class Add_child_task {
             else{
                 $("#fade").css("display","block");
                 $("#child_task_id").css("display","block");
+                let task_need_time=$("#task_need_time_id");
+                if (task_need_time.is(":hidden")){
+                    task_need_time.show();
+                }
                 global.task_object = that;
             }
         });
@@ -380,7 +384,7 @@ class Add_child_task {
             },
             stop: function (event,ui) {
                 let unchanged_direction = "";
-                let changed_ratio = 1;
+                let changed_ratio=1;
                 changed_ratio = ui.size.width/that.div_width;
                 if(that.div_left===ui.position.left){
                     unchanged_direction = "left";

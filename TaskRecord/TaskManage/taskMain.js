@@ -136,7 +136,10 @@ $(function(){
     $("#tree_header_add_icon_id").click(function () {
         document.getElementById('child_task_id').style.display='block';
         document.getElementById('fade').style.display='block';
-        $("#task_need_time_id").hide();
+        let task_need_time=$("#task_need_time_id");
+        if (task_need_time.is(":visible")){
+            task_need_time.hide();
+        }
         $("input[name='task_name'] ").val("");
     });
 });
