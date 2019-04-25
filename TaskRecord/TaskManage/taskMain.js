@@ -117,6 +117,12 @@ function send_task() {
         // console.log("Main_task");
         that.index++;
         that.row_num++;
+        $("#" + new_tree_row.date_id + "_block")
+            .draggable("disable")
+            .resizable("disable")
+            .css("background","rgba(255,130,180,0.5)")
+            .css("top","-5px")
+            .css("height","10px");
     }
     that.child_num = that.child_num +1; //child_item中项数 第二项目始为其创建的节点
     global.task_object = create_Main_task;

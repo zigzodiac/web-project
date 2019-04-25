@@ -1,14 +1,12 @@
 class Add_child_task {
-
     constructor(parent){
-
         if (parent === create_Main_task) {
             this.hierarchies =0;
         }
         else{
             if(parent.child_object.length !== 0){
-                this.brother_object = parent.child_object[parent.child_object.length-1];
-                this.brother_object= this.brother_object.insert_position();
+                // this.brother_object = parent.child_object[parent.child_object.length-1];
+                this.brother_object= parent.insert_position();
                 this.brother_object_id = this.brother_object.item_id[0];
                 this.date_brother_id = this.brother_object.date_id;
             }
@@ -42,7 +40,8 @@ class Add_child_task {
         this.task_need_time = global.date;
         this.div_left = 0;
         this.div_width = 0;
-
+        this.current_div_left =0;
+        this.current_div_width = 0;
         this.append_task();
         // this.add_day();
         this.slid_block();//need parameter
@@ -54,7 +53,7 @@ class Add_child_task {
         let tree_view_row_item_first = "<div class= 'tree_view_row_item_first' id ='"+this.item_id[1]+"'></div>";
         let tree_view_row_item_first_icon0 = "<div class= 'tree_view_row_item_first_icon0 tree_file_subtract_icon tree_view_icon' id ='"+this.item_id[2]+"'></div>";
         let tree_view_row_item_first_icon1 = "<div class= 'tree_view_row_item_first_icon1 tree_file_merge_icon tree_view_icon' id ='"+this.item_id[3]+"'></div>";
-        let tree_view_row_item_first_text = "<div class='tree_view_text' id='"+this.item_id[4]+this.child_num+"'>"+this.task_name+"</div>";
+        let tree_view_row_item_first_text = "<div class='tree_view_text' id='"+this.item_id[4]+"'>"+this.task_name+"</div>";
         //行结尾部分
         let tree_view_row_item_last = "<div class= 'tree_view_row_item_last' id ='"+this.item_id[5]+"'></div>";
         let tree_view_row_item_last_icon0 = "<div class= 'tree_view_row_item_last_icon0 tree_view_flag_icon tree_view_icon' id ='"+this.item_id[6]+"'></div>";
@@ -196,6 +195,8 @@ class Add_child_task {
         this.task_date=[start_date,end_date];
         this.div_left = left_days*15;
         this.div_width = days*15;
+        this.current_div_left = this.div_left;
+        this.current_div_width = this.div_width;
 
         let sliding_block = "<div class='date_view_row_block' id ='"+ this.date_id + "_block'></div>";
         let day_block_left = "<div class ='ui-resizable-handle ui-resizable-w' id='" + this.date_id + "_day_block_left' data-of_object= 'that'></div>";
@@ -267,6 +268,7 @@ class Add_child_task {
             }
         }
     }
+
     alter_child_sliding_length_drag(change_left){
         if (this.child_object.length>=1){
             for (let value of this.child_object){
@@ -276,6 +278,35 @@ class Add_child_task {
             }
         }
     }
+    // alter_child_sliding_length_current_resize(unchanged_direction,unchanged_length,changed_ratio){
+    //     let current_left =0;
+    //     let current_width = 0;
+    //     if(this.child_object.length>=1){
+    //         for(let value of this.child_object){
+    //             switch (unchanged_direction) {
+    //                 case "left":
+    //                     current_left = (value.div_left - unchanged_length)*changed_ratio+unchanged_length;
+    //                     current_width = value.div_width*changed_ratio;
+    //                     break;
+    //                 case "right":
+    //                     current_left = unchanged_length-(unchanged_length-value.div_left-value.div_width)*changed_ratio-value.div_width*changed_ratio;
+    //                     current_width  = value.div_width*changed_ratio;
+    //                     break;
+    //             }
+    //             current_left = Math.floor(value.div_left/15)*15;  //向下取整
+    //             current_width = Math.ceil(value.div_width/15)*15;//向上
+    //             if(current_width<15){
+    //                 current_width = 15;
+    //             }
+    //             let sliding_block = $("#"+ value.date_id + '_block');
+    //             sliding_block.css("left",current_left+'px');
+    //             sliding_block.css("width",current_width+'px');
+    //             this.current_div_left = current_left;
+    //             this.current_div_width = current_width;
+    //             value.alter_child_sliding_length_current_resize(unchanged_direction,unchanged_length,changed_ratio)
+    //         }
+    //     }
+    // }
     alter_child_sliding_length_resize(unchanged_direction,unchanged_length,changed_ratio){
         switch (unchanged_direction) {
             case  "left":
@@ -283,8 +314,11 @@ class Add_child_task {
                     for(let value of this.child_object){
                         value.div_left = (value.div_left - unchanged_length)*changed_ratio+unchanged_length;
                         value.div_width = value.div_width*changed_ratio;
-                        // value.div_left = Math.ceil(value.div_left/15)*15;
-                        // value.div_width = Math.ceil(value.div_width/15)*15;
+                        value.div_left = Math.floor(value.div_left/15)*15;  //向下取整
+                        value.div_width = Math.ceil(value.div_width/15)*15;//向上
+                        if(value.div_width<15){
+                            value.div_width = 15;
+                        }
                         let sliding_block = $("#"+ value.date_id + '_block');
                         sliding_block.css("left",value.div_left+'px');
                         sliding_block.css("width",value.div_width+'px');
@@ -297,9 +331,12 @@ class Add_child_task {
                     for(let value of this.child_object){
                         value.div_left = unchanged_length-(unchanged_length-value.div_left-value.div_width)*changed_ratio-value.div_width*changed_ratio;
                         value.div_width  = value.div_width*changed_ratio;
+                        value.div_left = Math.floor(value.div_left/15)*15;  //向下取整
+                        value.div_width = Math.ceil(value.div_width/15)*15;//向上
+                        if(value.div_width<15){
+                            value.div_width = 15;
+                        }
                         let sliding_block = $("#"+ value.date_id + '_block');
-                        // value.div_left = Math.ceil(value.div_left/15)*15;
-                        // value.div_width = Math.ceil(value.div_width/15)*15;
                         sliding_block.css("left",value.div_left+'px');
                         sliding_block.css("width",value.div_width+'px');
                         value.alter_child_sliding_length_resize(unchanged_direction,unchanged_length,changed_ratio)
@@ -312,6 +349,7 @@ class Add_child_task {
         let that =this;
         let current_id  = $("#"+this.row_div_id);
         let date_row_id = $("#"+this.date_id);
+        let text_alter = $("#"+this.item_id[4]);//alter text
         let sliding_block_handle_w = $("#" + this.date_id + "_day_block_left");
         let sliding_block_handle_e = $("#" + this.date_id + "_day_block_right");
         let row_block = $("#" + this.date_id + "_block");
@@ -327,20 +365,38 @@ class Add_child_task {
                 date_row_id.css("background-color", "#838383");
             }
         );
+        text_alter.on("dblclick",function(){
+            console.log("alter text");
+            let inputElement = document.createElement("input");
+            //get div text value
+            inputElement.value = this.innerHTML;
+            //replace div with input
+            this.parentNode.replaceChild(inputElement, this);
+            let that =this;
+
+            // 当inputElement失去焦点时触发下面函数，使得input变成div
+            inputElement.onblur = function() {
+                //pass input value to div
+               that.innerHTML = inputElement.value;
+                //用原来的div重新替换inputElement
+                inputElement.parentNode.replaceChild(that, inputElement);
+            }
+
+        });
         sliding_block_handle_w.hover(
             function () {
-                sliding_block_handle_w.css("background","rgba(130,228,255,0.5)")
+                sliding_block_handle_w.css("background","rgba(90,220,99,0.5)")
             },
             function () {
-                sliding_block_handle_w.css("background","rgba(255, 232, 63, 0.5)")
+                sliding_block_handle_w.css("background","rgba(71, 255, 124, 0.5)")
             }
         );
         sliding_block_handle_e.hover(
             function () {
-                sliding_block_handle_e.css("background","rgba(130,228,255,0.5)")
+                sliding_block_handle_e.css("background","rgba(90,220,99,0.5)")
             },
             function () {
-                sliding_block_handle_e.css("background","rgba(158,160,159,0.5)")
+                sliding_block_handle_e.css("background","rgba(71, 255, 124, 0.5)")
             }
         );
         row_block.on("dblclick",function(){
@@ -356,12 +412,12 @@ class Add_child_task {
             create: function (event, ui) {
             },
             drag: function (event, ui) {
-                // day_block_left_hover.css("width","15px");
-                // ui.position.left = Math.min( 100, ui.position.left );
-                // console.log("1111111", Math.round(ui.position.left / 15));
-                // move_width=left_days*15-ui.position.left/15
-                // row_block.css("left",ui.position.left+"px");
-                // row_block.css("width",days*15-ui.position.left+"px");
+                let change_left= ui.position.left - that.div_left;
+                that.div_left = ui.position.left;
+                if (that.parent_object!==create_Main_task){
+                    that.parent_object.alter_father_sliding_length();
+                }
+                that.alter_child_sliding_length_drag(change_left);
             },
             scroll: true,
             axis: "x",
@@ -369,14 +425,14 @@ class Add_child_task {
             // minWidth : 15,
             containment:"parent",
             stop: function (event,ui) {
-                let change_left= ui.position.left - that.div_left;
-                that.div_left = ui.position.left;
-                if (that.parent_object!==create_Main_task){
-                    that.parent_object.alter_father_sliding_length();
-                }
-                that.alter_child_sliding_length_drag(change_left);
+
             }
         });
+
+        let status = true;
+        let unchanged_direction = "";
+        let changed_ratio=1;
+        let unchanged_length = 0;
         row_block.resizable({
             create: function( event, ui ) {},
             containment: "parent",
@@ -392,18 +448,35 @@ class Add_child_task {
             resize: function (event, ui) {
                 // console.log("resize222222222222",Math.round(ui.position.left / 15));
                 // console.log("resize222222222222",ui.size.width);
+                // status = true;
+                // changed_ratio = ui.size.width/that.div_width;
+                // if(that.div_left===ui.position.left){
+                //     unchanged_length = that.div_left;
+                //     unchanged_direction = "left";
+                //     that.alter_child_sliding_length_current_resize(unchanged_direction,unchanged_length,changed_ratio,status)
+                //
+                // }
+                // else{
+                //     unchanged_length = that.div_left+that.div_width;
+                //     unchanged_direction = "right";
+                //     that.alter_child_sliding_length_current_resize(unchanged_direction,unchanged_length,changed_ratio,status)
+                // }
+                // that.current_div_left = ui.position.left;
+                // that.current_div_width = ui.size.width;
+                // if (that.parent_object!==create_Main_task){
+                //     that.parent_object.alter_father_sliding_current_length();
+                // }
             },
             stop: function (event,ui) {
-                let unchanged_direction = "";
-                let changed_ratio=1;
                 changed_ratio = ui.size.width/that.div_width;
                 if(that.div_left===ui.position.left){
+                    unchanged_length = that.div_left;
                     unchanged_direction = "left";
-                    that.alter_child_sliding_length_resize(unchanged_direction,that.div_left,changed_ratio)
+                    that.alter_child_sliding_length_resize(unchanged_direction,unchanged_length,changed_ratio)
 
                 }
                 else{
-                    let unchanged_length = that.div_left+that.div_width;
+                    unchanged_length = that.div_left+that.div_width;
                     unchanged_direction = "right";
                     that.alter_child_sliding_length_resize(unchanged_direction,unchanged_length,changed_ratio)
                 }
@@ -412,9 +485,11 @@ class Add_child_task {
                 if (that.parent_object!==create_Main_task){
                     that.parent_object.alter_father_sliding_length();
                 }
+                // that.div_left =that.current_div_left;
+                // that.div_width = that .current_div_width;
+                // status = false;
+                // that.alter_child_sliding_length_resize(unchanged_direction,unchanged_length,changed_ratio,status);
 
-                // alter("father_task's date alter function not yet append please ")
-                // that.parent_object.alter_date(that.task_date[0],that.task_date[1]);
             }
         });
         let flag = $("#"+this.item_id[6]);
@@ -434,19 +509,15 @@ class Add_child_task {
     }
 
     insert_position(){
-        // let current_brother_object ;
         let that;
         if(this.child_object.length !== 0){
             that =  this.child_object[this.child_object.length - 1];
-            that.insert_position();
+            that = that.insert_position();
         }
         else{
             that = this;
         }
         return that;
-        // else{
-        //     current_brother_object = this.brother_object;
-        // }
     }
     //hide all item under self
     child_hide() {
