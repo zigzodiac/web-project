@@ -240,9 +240,13 @@
 /*    background: #b396ff !important;*/
 /*}*/
 .tree_view_row_item_first{
-    margin-left: 0;
+    position: absolute;
     display: inline-block;
-    color: #ffb0d3;
+    left: 0;
+    margin: auto;
+    width: 30%;
+    line-height: 1;
+    color: #b4adb0;
 }
 .tree_view_row_item_last{
     position: absolute;
@@ -269,10 +273,10 @@
     color: #ffb0d3;
 }
 .tree_view_text{
+    top: 0;
     display: inline-block;
+    align-content: center;
     font-size: 13px;
-    margin-top: 1px;
-    margin-bottom: 1px;
 }
 .tree_view_row_item_last_icon0{
     float: right;

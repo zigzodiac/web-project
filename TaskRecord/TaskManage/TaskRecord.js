@@ -196,7 +196,6 @@ class Add_child_task {
         this.div_left = left_days*15;
         this.div_width = days*15;
         this.current_div_left = this.div_left;
-        this.current_div_width = this.div_width;
 
         let sliding_block = "<div class='date_view_row_block' id ='"+ this.date_id + "_block'></div>";
         let day_block_left = "<div class ='ui-resizable-handle ui-resizable-w' id='" + this.date_id + "_day_block_left' data-of_object= 'that'></div>";

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body, #container {
+            height: 100%;
+            margin: 0;
+        }
+        #container {
+            padding: 2rem;
+            box-sizing: border-box;
+            overflow-y: hidden;
+            position: relative;
+            padding-right: 30px;
+        }
+        .scrollbar {
+            height: 166px;
+            width: 20px;
+            border-radius: 20px;
+            background: #ccc;
+            position: absolute;
+            right: 0;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var scrollbar = document.querySelector('.scrollbar');
+            var container = scrollbar.parentNode;
+            container.scrollbar = scrollbar;
+            container.ratio =
+                (container.scrollHeight - container.offsetHeight) / (container.offsetHeight - scrollbar.offsetHeight);
+            container.addEventListener('mousewheel', function(e) {
+                this.scrollTop += e.deltaY;
+                this.scrollbar.style.top = (this.scrollTop + this.scrollTop / this.ratio) + 'px';
+            });
+            container.addEventListener('mousedown', function (e) {
+                if (e.target === this.scrollbar) {
+                    this.prevY = e.pageY;
+                }
+            });
+            container.addEventListener('mouseup', function (e) {
+                this.prevY = null;
+            });
+            container.addEventListener('mousemove', function (e) {
+                if (this.prevY) {
+                    this.scrollTop += (e.pageY - this.prevY) * this.ratio;
+                    this.scrollbar.style.top = (this.scrollTop + this.scrollTop / this.ratio) + 'px';
+                    this.prevY = e.pageY;
+                }
+                e.preventDefault();
+            });
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <div class="scrollbar"></div>
+    bla, bla, bla... 一大段很长的文字
+</div>
+</body>
+</html>
