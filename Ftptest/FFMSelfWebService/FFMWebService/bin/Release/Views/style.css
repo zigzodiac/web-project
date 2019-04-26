@@ -1,0 +1,21 @@
+body {
+    background-color:#ff0404;
+}
+
+#main_title {
+    width: 100%;
+    height: 100px;
+    background-color: #1100ff;
+}
+
+#side_bar {
+    width: 120px;
+    height: 100%;
+    background-color:#fbff04;
+}
+
+#side_bar_button1 {
+    width: 100%;
+    height: 40px;
+    background-color:#04ff19;
+}

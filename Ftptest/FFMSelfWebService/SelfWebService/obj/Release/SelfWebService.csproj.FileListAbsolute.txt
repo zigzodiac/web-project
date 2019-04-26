@@ -1,0 +1,16 @@
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\SelfWebService.exe.config
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\SelfWebService.exe
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\SelfWebService.pdb
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\Newtonsoft.Json.dll
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\System.Net.Http.Formatting.dll
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\System.Web.Http.dll
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\System.Web.Http.SelfHost.dll
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\Newtonsoft.Json.pdb
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\Newtonsoft.Json.xml
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\System.Net.Http.Formatting.xml
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\System.Web.Http.xml
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\bin\Release\System.Web.Http.SelfHost.xml
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\obj\Release\SelfWebService.csproj.CoreCompileInputs.cache
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\obj\Release\SelfWebService.csproj.CopyComplete
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\obj\Release\SelfWebService.exe
+D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\SelfWebService\obj\Release\SelfWebService.pdb

@@ -1,0 +1,225 @@
+QMainWindow, QWidget, QDialog {
+    background-color: rgb(50 ,58, 61);
+
+}
+
+QMenuBar {
+	background-color: rgb(50 ,58, 61);
+    color: rgb(158, 158, 158);
+    margin: 2px; /* some spacing around the menu */
+}
+
+QMenuBar::item {
+    spacing: 3px;
+    padding: 6px;
+    background: transparent;
+    border-right: 1px solid  rgb(138, 138, 138);
+}
+
+QMenuBar::item:selected {
+    border-color: rgb(112, 112, 138);
+    background: rgba(100, 100, 100, 150);
+}
+
+QMenuBar::item:pressed {
+    border-color: rgb(138, 138, 138);
+    background: rgba(120, 120, 120, 150);
+    color: rgb(38, 38, 38);
+}
+
+QMenu {
+    background-color: rgb(50 ,58, 61);
+    color: rgb(158, 158, 158);
+    margin: 2px; /* some spacing around the menu */
+}
+
+QMenu::item {
+    padding: 2px 25px 2px 20px;
+    border: 1px solid transparent; /* reserve space for selection border */
+}
+
+QMenu::item:selected {
+    border-color: rgb(112, 112, 138);
+    background: rgba(100, 100, 100, 150);
+}
+
+/*
+QWidget {
+    background-color: #222525;
+}
+
+QDialog {
+    background-color: #222525;
+}
+*/
+
+QPushButton {
+    background-color: rgb(67, 81, 95);
+    font: 14px;
+    padding: 3px;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(202, 202, 202);
+    /* border-radius: 5px; */
+}
+
+QPushButton#Btn_Disable {
+    background-color: rgb(67, 81, 95, 150);
+    font: 14px;
+    padding: 3px;
+    color: rgb(150, 150, 150);
+    border: 1px solid rgb(202, 202, 202);
+}
+
+QPushButton:hover {
+    background-color: rgb(113, 125, 138);
+}
+QPushButton:pressed {
+    background-color: rgb(43, 51, 58);
+}
+
+QTableWidget, QTableView, QTreeWidget, QDoubleSpinBox, QGroupBox {
+    background-color: rgb(34, 37, 37);
+    color: rgb(238, 238, 238);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: 11pt;
+}
+
+QTableWidget::item:hover, QTableWidget::item:hover {
+    background-color: #434b4e;
+    border-top: 1px solid #a8a8a8;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+QTableWidget::item:selected, QTableWidget::item:hover {
+    background-color: #4e4d53;
+    border-top: 1px solid #a8a8a8;
+    border-bottom: 1px solid #a8a8a8;
+}
+
+QHeaderView::section {
+    background-color: rgb(165, 165, 165);
+    color: rgb(15, 15, 15);
+    border: 0px;
+    border-right: 1px solid  rgb(15, 15, 15);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    outline: none;
+}
+
+QLabel {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: 10pt;
+    color: rgb(238, 238, 238);
+}
+
+QLabel#Payed {
+    background-color: #6888f3;
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QLabel#NotPayed {
+    background-color: #c41818;
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QLabel#JobStateStart {
+    background-color: #66964b;
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QLabel#JobStateQueue {
+    background-color: #8b8d0f;
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QLabel#JobStateFinish {
+    background-color: #6888f3;
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QLabel#JobStateError {
+    background-color: #c41818;
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QLabel#JobStateOther {
+    background-color: #00D1D3;
+    color: rgb(75, 25, 10);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QLabel#JobError {
+    background-color: #c41818;
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+}
+
+QProgressBar {
+    background: transparent;
+    border: 2px solid;
+    border-color: rgb(138, 138, 138, 150);
+    color: rgb(252, 250, 228);
+    margin: 2px;
+    margin-left: 6px;
+    margin-right: 6px;
+    border-radius: 8px;
+}
+
+QProgressBar::chunk {
+    background-color: #05B8CC;
+    border-radius: 5px;
+}
+
+QLineEdit {
+    background-color: #212324;
+    border: 1px solid #4c5355;
+    color: rgb(235, 242, 250);
+}
+
+QCheckBox {
+    color: rgb(238, 238, 238);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: 12pt;
+    border: 2px solid rgb(100, 200, 150, 150);
+    border-radius: 5px;
+    padding: 3px;
+
+}
+
+QTextEdit {
+    color: rgb(238, 238, 238);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: 10pt;
+}

@@ -1,0 +1,13 @@
+<b>FFM Rendering Service</b>
+version: <b>Beta 1.0</b>
+
+design by: Lance
+product by: Jz, bCat
+company: FUTURE FILM MEDIA
+
+Administrator Contact
+Email : liuxiangdong@ffmilmco.com
+WeChat : l_1386
+Phone : 15383120715
+
+Provide FFM rendering service.

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfWebService", "SelfWebService\SelfWebService.csproj", "{F5AE1478-8F51-4FD6-B979-C09CDC5EC520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFMWebService", "FFMWebService\FFMWebService.csproj", "{EC8FAAE8-1B14-43C9-8185-34477527907D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5AE1478-8F51-4FD6-B979-C09CDC5EC520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5AE1478-8F51-4FD6-B979-C09CDC5EC520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5AE1478-8F51-4FD6-B979-C09CDC5EC520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5AE1478-8F51-4FD6-B979-C09CDC5EC520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8FAAE8-1B14-43C9-8185-34477527907D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8FAAE8-1B14-43C9-8185-34477527907D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8FAAE8-1B14-43C9-8185-34477527907D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8FAAE8-1B14-43C9-8185-34477527907D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4F65562-97FD-4BC3-B3B6-436CB033055B}
+	EndGlobalSection
+EndGlobal

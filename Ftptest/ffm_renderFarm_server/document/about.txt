@@ -1,0 +1,9 @@
+<b>FFM Render Farm Monitor information</b>
+version: v1.0.0.1
+
+design by: Lance
+product by: Jz, bCat
+company: FUTURE FILM MEDIA
+
+Provide FFM rendering farm machine real-time monitoring, control.
+提供FFM渲染农场机器的实时监控，控制。

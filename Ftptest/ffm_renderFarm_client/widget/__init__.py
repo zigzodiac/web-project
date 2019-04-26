@@ -1,0 +1,13 @@
+# !/usr/bin/env python
+# -*- coding:utf-8 -*-
+"""
+command information
+"""
+__author__ = "jeremyjone"
+__datetime__ = "2019/1/3 10:30"
+__all__ = ["__version__", ]
+__version__ = "1.0.0"
+
+
+JWindow = None
+JClientReceive = None

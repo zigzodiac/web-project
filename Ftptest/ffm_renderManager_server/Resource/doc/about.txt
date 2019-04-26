@@ -1,0 +1,10 @@
+<b>FFM Render Manager Monitor</b>
+Version: Beta1.0
+©FFM 2019
+
+Design by: Lance
+Product by: Jz, bCat
+Company: FUTURE FILM MEDIA
+
+Manage rendering client connection, task management, payment management, etc.
+管理渲染客户端的连接，任务管理，支付管理等

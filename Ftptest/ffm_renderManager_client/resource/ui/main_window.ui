@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1071</width>
+    <height>683</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="main_layout"/>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1071</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(58, 67, 70);
+border-bottom-color: rgb(147, 147, 147);</string>
+   </property>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionSubmit"/>
+    <addaction name="actionReSubmit_Job"/>
+    <addaction name="actionCancelJob"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_Render_Files"/>
+    <addaction name="separator"/>
+    <addaction name="actionShow_Errors"/>
+    <addaction name="separator"/>
+    <addaction name="actionLog_Out"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionSetting"/>
+    <addaction name="separator"/>
+    <addaction name="actionManual"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(58, 67, 70);
+border-bottom-color: rgb(147, 147, 147);
+color: rgb(223, 244, 28);
+font: 75 14pt &quot;Yu Gothic UI&quot;;</string>
+   </property>
+  </widget>
+  <action name="actionSubmit">
+   <property name="text">
+    <string>Submit Job</string>
+   </property>
+  </action>
+  <action name="actionManage_User">
+   <property name="text">
+    <string>Manage User</string>
+   </property>
+  </action>
+  <action name="actionCancelJob">
+   <property name="text">
+    <string>Cancel Job</string>
+   </property>
+  </action>
+  <action name="actionDownload_Render_Files">
+   <property name="text">
+    <string>Download Render Files</string>
+   </property>
+  </action>
+  <action name="actionPay_State">
+   <property name="text">
+    <string>Pay State</string>
+   </property>
+  </action>
+  <action name="actionSend_Error_Report">
+   <property name="text">
+    <string>Send Error Report</string>
+   </property>
+  </action>
+  <action name="actionShow_Render_Files">
+   <property name="text">
+    <string>Show Render Files</string>
+   </property>
+  </action>
+  <action name="actionOpen_File_Location">
+   <property name="text">
+    <string>Open File Location</string>
+   </property>
+  </action>
+  <action name="actionFilter_User">
+   <property name="text">
+    <string>Filter User</string>
+   </property>
+  </action>
+  <action name="actionReSubmit_Job">
+   <property name="text">
+    <string>Re Submit Job</string>
+   </property>
+  </action>
+  <action name="actionLog_Out">
+   <property name="text">
+    <string>Log Out</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionShow_Errors">
+   <property name="text">
+    <string>Show Errors</string>
+   </property>
+  </action>
+  <action name="actionManual">
+   <property name="text">
+    <string>Manual</string>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="text">
+    <string>Setting</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

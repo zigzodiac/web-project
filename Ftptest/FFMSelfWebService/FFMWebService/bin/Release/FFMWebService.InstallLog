@@ -1,0 +1,109 @@
+﻿Installing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Installing service FFMRenderWebService...
+Service FFMRenderWebService has been successfully installed.
+Creating EventLog source FFMRenderWebService in log Application...
+Committing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Uninstalling assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Removing EventLog source FFMRenderWebService.
+Service FFMRenderWebService is being removed from the system...
+Service FFMRenderWebService was successfully removed from the system.
+Installing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Installing service FFMRenderWebService...
+Service FFMRenderWebService has been successfully installed.
+Creating EventLog source FFMRenderWebService in log Application...
+Committing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Uninstalling assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Removing EventLog source FFMRenderWebService.
+Service FFMRenderWebService is being removed from the system...
+Service FFMRenderWebService was successfully removed from the system.
+Installing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Installing service FFMRenderWebService...
+Service FFMRenderWebService has been successfully installed.
+Creating EventLog source FFMRenderWebService in log Application...
+Committing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Uninstalling assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Removing EventLog source FFMRenderWebService.
+Service FFMRenderWebService is being removed from the system...
+Service FFMRenderWebService was successfully removed from the system.
+Attempt to stop service FFMRenderWebService.
+Uninstalling assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Removing EventLog source FFMRenderWebService.
+Warning: The source FFMRenderWebService is not registered on the local machine.
+Service FFMRenderWebService is being removed from the system...
+Service FFMRenderWebService was successfully removed from the system.
+Attempt to stop service FFMRenderWebService.
+Installing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Installing service FFMRenderWebService...
+Service FFMRenderWebService has been successfully installed.
+Creating EventLog source FFMRenderWebService in log Application...
+Committing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Uninstalling assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Removing EventLog source FFMRenderWebService.
+Service FFMRenderWebService is being removed from the system...
+Service FFMRenderWebService was successfully removed from the system.
+Attempt to stop service FFMRenderWebService.
+Installing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
+Installing service FFMRenderWebService...
+Service FFMRenderWebService has been successfully installed.
+Creating EventLog source FFMRenderWebService in log Application...
+Committing assembly 'D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.InstallLog
+   assemblypath = D:\FFM\T\FFM-Pipeline\code\FFMSelfWebService\FFMWebService\bin\Release\FFMWebService.exe
