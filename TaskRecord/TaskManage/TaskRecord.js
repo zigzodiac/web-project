@@ -368,7 +368,13 @@ class Add_child_task {
             console.log("alter text");
             let inputElement = document.createElement("input");
             //get div text value
+            inputElement.type ="text";
+            inputElement.id = "name_input";
+            inputElement.className= "name_input";
+            // $("#name_input").css("width","50px").css("height","18px");
+            console.log(inputElement);
             inputElement.value = this.innerHTML;
+            // inputElement.style="maxlength:18px,width:50px";
             //replace div with input
             this.parentNode.replaceChild(inputElement, this);
             let that =this;
@@ -384,18 +390,18 @@ class Add_child_task {
         });
         sliding_block_handle_w.hover(
             function () {
-                sliding_block_handle_w.css("background","rgba(90,220,99,0.5)")
+                sliding_block_handle_w.css("background","rgba(255,10,28)")
             },
             function () {
-                sliding_block_handle_w.css("background","rgba(71, 255, 124, 0.5)")
+                sliding_block_handle_w.css("background","rgba(90,220,99,0.5)")
             }
         );
         sliding_block_handle_e.hover(
             function () {
-                sliding_block_handle_e.css("background","rgba(90,220,99,0.5)")
+                sliding_block_handle_e.css("background","rgba(255,10,28)")
             },
             function () {
-                sliding_block_handle_e.css("background","rgba(71, 255, 124, 0.5)")
+                sliding_block_handle_e.css("background","rgba(90,220,99,0.5)")
             }
         );
         row_block.on("dblclick",function(){

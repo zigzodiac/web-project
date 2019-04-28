@@ -1,6 +1,0 @@
-[2019/03/11 11:24:10 AM - User2] : 'E:\Utils\CentOS-6.9-x86_64-bin-DVD1.iso' Copy to 'C:\test3.iso'
-[2019/03/11 11:44:11 AM - User2] : 'E:\Utils\CentOS-6.9-x86_64-bin-DVD1.iso' Copy to 'C:\test3.iso'
-[2019/03/11 11:53:31 AM - User1] : 'E:\Utils\CentOS-6.9-x86_64-bin-DVD1.iso' Copy to 'C:\test1.iso'
-[2019/03/11 11:54:00 AM - User1] : 'E:\Utils\bitnami-redmine-3.4.2-3-windows-installer.exe' Copy to 'C:\test2.exe'
-[2019/03/11 12:56:31 PM - Lance] : 'E:\Utils\CentOS-6.9-x86_64-bin-DVD1.iso' Copy to 'C:\test1.iso'
-[2019/03/11 12:56:32 PM - Lance] : 'E:\Utils\bitnami-redmine-3.4.2-3-windows-installer.exe' Copy to 'C:\test2.exe'

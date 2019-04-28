@@ -48,7 +48,7 @@
     right:0;
     display: inline-block;
     height: 100%;
-    width: 30%;
+    width: 24%;
     color:#0000FF;
 }
 .tree_header_days{
@@ -152,7 +152,7 @@
 .date_view_row{
     height: 20px;
     width: 100%;
-    background-color: rgba(158, 160, 159, 0.5);
+    background-color: #838383;
     white-space: nowrap;
     border-bottom: 1px #95d9f5;
     border-bottom-style: outset;
@@ -184,7 +184,7 @@
     height: 19px;
     font-size: 2px;
     text-align: center;
-    background: rgba(71, 255, 124, 0.5);
+    background: rgba(90,220,99,0.5);
     overflow: hidden;
 
 }
@@ -225,7 +225,7 @@
     /*border-bottom-color: rgb(88, 95, 104);*/
     /*border-right: 1px solid #ff5e79;*/
     /*border-right-color: rgb(255, 94, 121);*/
-    color: #878988;
+    background-color: #878988;
     width:249px;
     height:19px;
     border-bottom: 1px solid #8dc083;
@@ -246,7 +246,6 @@
     margin: auto;
     width: 30%;
     line-height: 1;
-    color: #b4adb0;
 }
 .tree_view_row_item_last{
     position: absolute;
@@ -255,7 +254,6 @@
     margin: auto;
     width: 30%;
     line-height: 1;
-    color: #b4adb0;
 }
 .tree_view_row_item_first_icon0{
     margin-top: 1px;
@@ -273,10 +271,23 @@
     color: #ffb0d3;
 }
 .tree_view_text{
-    top: 0;
+    position: absolute;
+    white-space: nowrap;
+    top: auto;
     display: inline-block;
     align-content: center;
     font-size: 13px;
+}
+.name_input{
+    color: #9cff9e;
+    display:inline-block;
+    text-align:center;
+    height: 18px ;
+    width: 60px;
+    margin-top: 0;
+    z-index: 99999;
+    position: absolute;
+    background: #b6b8b7;
 }
 .tree_view_row_item_last_icon0{
     float: right;
