@@ -274,9 +274,11 @@
     position: absolute;
     white-space: nowrap;
     top: auto;
+    width: 60px;
     display: inline-block;
     align-content: center;
     font-size: 13px;
+    overflow: hidden;
 }
 .name_input{
     color: #9cff9e;

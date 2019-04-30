@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf95063-7fd2-474c-86a4-c1566c7fd6f9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/client/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/datebase/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/server/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/pythonstudy/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/froms/poemmaker.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/froms/static/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/froms/templates/book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/froms/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/froms/templates/munged.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/hello_erros.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/studyTornado/string_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Ftptest/test/tweet_rate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Ftptest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Ftptest/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskRecord.css" beforeDir="false" afterPath="$PROJECT_DIR$/TaskRecord.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TaskRecord.js" beforeDir="false" afterPath="$PROJECT_DIR$/TaskRecord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/taskMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testhover.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/testhover.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testhover2.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/testhover2.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,17 +39,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaskRecord.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="26" />
+            <state relative-caret-position="342">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaskRecord.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="355" column="48" selection-start-line="355" selection-start-column="48" selection-end-line="355" selection-end-column="48" />
+            <state relative-caret-position="551">
+              <caret line="374" selection-start-line="374" selection-end-line="374" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test2/divdrag.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -48,17 +78,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TaskRecord.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3439">
+            <state relative-caret-position="530">
               <caret line="181" column="11" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taskMain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2166">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="697">
+              <caret line="162" column="43" lean-forward="true" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -106,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -128,7 +158,7 @@
             <path>
               <item name="TaskManage" type="b2602c69:ProjectViewProjectNode" />
               <item name="TaskManage" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="test2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -139,12 +169,14 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/FFM_Code/study/zhangyongqing/TaskRecord" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project\TaskRecord\TaskManage\test" />
+      <recent name="D:\Project\TaskRecord\TaskManage\test2" />
       <recent name="D:\FFM_Code\zhangyongqing\TaskRecord\TaskManage\test" />
       <recent name="D:\FFM_Code\zhangyongqing\TaskRecord\TaskManage" />
     </key>
@@ -177,20 +209,22 @@
       <workItem from="1555896437790" duration="25179000" />
       <workItem from="1556242672254" duration="398000" />
       <workItem from="1556249000915" duration="24000" />
+      <workItem from="1556616030341" duration="806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57156000" />
+    <option name="totallyTimeSpent" value="57962000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15173867" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.30769232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -239,17 +273,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/page.html">
+    <entry file="file://$PROJECT_DIR$/test/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TaskRecord.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -265,22 +292,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TaskRecord.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3439">
+        <state relative-caret-position="530">
           <caret line="181" column="11" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/taskMain.js">
+    <entry file="file://$PROJECT_DIR$/TaskRecord.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2166">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+        <state relative-caret-position="342">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2/divdrag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TaskRecord.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="355" column="48" selection-start-line="355" selection-start-column="48" selection-end-line="355" selection-end-column="48" />
+        <state relative-caret-position="551">
+          <caret line="374" selection-start-line="374" selection-end-line="374" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/taskMain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="162" column="43" lean-forward="true" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
         </state>
       </provider>
     </entry>

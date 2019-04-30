@@ -98,34 +98,43 @@ var global = {
     date : "null",
     div_status:false,
     task_object:create_Main_task,
+    func: "add"//alter
 };
 function send_task() {
     $("#child_task_id").css("display","none");
     $("#fade").css("display","none");
     global.task_name = $("input[id ='child_task_name_id']").val();
     global.date = $("input[id ='task_date_id']").val();
-    let that = global.task_object;//父对象
-    let new_tree_row = new Add_child_task(that);
-    // new_tree_row.slid_block();
-    if (that!== create_Main_task) {
-        that.child_object.push(new_tree_row);
-        that.child_item.push(that.item_id[0]+"_"+that.child_num);
-        new_tree_row.parent_object.alter_father_sliding_length();
-       //入数组 列表上的兄弟
+    switch (global.func) {
+        case "add":
+            let that = global.task_object;//父对象
+            let new_tree_row = new Add_child_task(that);
+            // new_tree_row.slid_block();
+            if (that!== create_Main_task) {
+                that.child_object.push(new_tree_row);
+                that.child_item.push(that.item_id[0]+"_"+that.child_num);
+                new_tree_row.parent_object.alter_father_sliding_length();
+                //入数组 列表上的兄弟
+            }
+            else{
+                // console.log("Main_task");
+                that.index++;
+                that.row_num++;
+                $("#" + new_tree_row.date_id + "_block")
+                    .draggable("disable")
+                    .resizable("disable")
+                    .css("background","rgba(255,130,180,0.5)")
+                    .css("top","-5px")
+                    .css("height","10px");
+            }
+            that.child_num = that.child_num +1; //child_item中项数 第二项目始为其创建的节点
+            global.task_object = create_Main_task;
+            break;
+        case "alter":
+            break;
     }
-    else{
-        // console.log("Main_task");
-        that.index++;
-        that.row_num++;
-        $("#" + new_tree_row.date_id + "_block")
-            .draggable("disable")
-            .resizable("disable")
-            .css("background","rgba(255,130,180,0.5)")
-            .css("top","-5px")
-            .css("height","10px");
-    }
-    that.child_num = that.child_num +1; //child_item中项数 第二项目始为其创建的节点
-    global.task_object = create_Main_task;
+
+
 
 }
 function quit(){
@@ -144,10 +153,7 @@ $(function(){
     $("#tree_header_add_icon_id").click(function () {
         let delete_task = $("#delete_task_id");
         delete_task.css('visibility', 'hidden');
-        // if(delete_task.is(":visible")){
-        //
-        // }
-
+        global.func = "add";
         document.getElementById('child_task_id').style.display='block';
         document.getElementById('fade').style.display='block';
         let task_need_time=$("#task_need_time_id");
