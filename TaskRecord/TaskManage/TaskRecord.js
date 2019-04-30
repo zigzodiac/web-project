@@ -352,6 +352,8 @@ class Add_child_task {
         }
     }
     mouse_event(){
+        let current_obj1 = null;
+        let current_obj2 = null;
         let that =this;
         let current_id  = $("#"+this.row_div_id);
         let date_row_id = $("#"+this.date_id);
@@ -371,7 +373,30 @@ class Add_child_task {
                 date_row_id.css("background-color", "#838383");
             }
         );
-        current_id.draggable="true";
+        current_id.draggable ="true";
+        current_id.onselectstart = function(){
+            return false
+        }
+            .ondragstart = function(ev){
+                current_obj1 = this;
+                ev.preventDefault();
+        }
+            .ondragend = function(ev){
+
+        }
+            .ondragover = function(ev){
+
+        }
+            .ondragenter = function(ev){
+
+        }
+            .ondrop = function(ev){
+                ev.preventDefault();
+                print(this);
+                let cur_id = current_obj1.id;
+                current_obj1.id = this.id;
+
+        };
 
         text_alter.on("dblclick",function(){
             console.log("alter text");
