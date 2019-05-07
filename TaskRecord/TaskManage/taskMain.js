@@ -133,9 +133,6 @@ function send_task() {
         case "alter":
             break;
     }
-
-
-
 }
 function quit(){
     document.getElementById('child_task_id').style.display='none';
@@ -145,6 +142,39 @@ function quit(){
 }
 function delete_task(){
 }
+// function allowDrop(ev) {
+//     ev.preventDefault();
+// }
+// var srcdiv = null;
+// var temp = null;
+// //当拖动时触发
+// function drag(ev, divdom) {
+//     srcdiv = divdom;
+//     temp = divdom.innerHTML;
+// }
+// //当拖动完后触发
+// function drop(ev, divdom) {
+//     ev.preventDefault();
+//     if (srcdiv !== divdom) {
+//         srcdiv.innerHTML = divdom.innerHTML;
+//         divdom.innerHTML = temp;
+//     }
+// }
+// var srcdiv = null;
+// function drag(ev,divdom)
+// {
+//     srcdiv=divdom;
+//     ev.dataTransfer.setData("text/html",divdom.innerHTML);
+// }
+//
+// function drop(ev,divdom)
+// {
+//     ev.preventDefault();
+//     if(srcdiv !== divdom){
+//         srcdiv.innerHTML = divdom.innerHTML;
+//         divdom.innerHTML=ev.dataTransfer.getData("text/html");
+//     }
+// }
 $(function(){
     initialization();
     add_time_header(task_date);

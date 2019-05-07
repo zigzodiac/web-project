@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据源配置：配置</title>
+    <link rel="stylesheet" type="text/css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #titleDiv{
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            height: 50px;
+            margin-top: 50px;
+        }
+        #submit{
+            width: 800px;
+            height: 50px;
+            background-color: blue;
+            margin:auto;
+            text-align: center;
+        }
+        #content{
+            width: 800px;
+            height: 200px;
+            background-color: blue;
+            margin:auto;
+        }
+        #priority{
+            width:200px;
+            background-color: burlywood;
+            height:200px;
+            float: left;
+        }
+        #priorityTitle,#dataSourceTitle,#forbiddenYNTitle{
+            width:200px;
+            height: 20px;
+            margin: auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        #priorityOne,#priorityTwo,#priorityThree,#forbiddenYN1,#forbiddenYN2,#forbiddenYN3{
+            width:200px;
+            height:20px;
+            margin: auto;
+            margin-top: 10px;
+            text-align: center;
+        }
+        #dataSourceOne,#dataSourceTwo,#dataSourceThree{
+            width:400px;
+            height:20px;
+            margin: auto;
+            margin-top: 10px;
+            text-align: center;
+        }
+        #dataSource{
+            width:400px;
+            height:200px;
+            background-color: burlywood;
+            float: left;
+        }
+        #forbiddenYN{
+            width:200px;
+            height:200px;
+            background-color: burlywood;
+            float: left;
+        }
+        #submitInput{
+            width: 60px;
+            height: 30px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: red;
+        }
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        function allowDrop(ev)
+        {
+            ev.preventDefault();
+        }
+        var srcdiv = null;
+        function drag(ev,divdom)
+        {
+            srcdiv=divdom;
+            ev.dataTransfer.setData("text/html",divdom.innerHTML);
+        }
+        function drop(ev,divdom)
+        {
+            ev.preventDefault();
+            if(srcdiv !== divdom){
+                srcdiv.innerHTML = divdom.innerHTML;
+                divdom.innerHTML=ev.dataTransfer.getData("text/html");
+            }
+        }
+    </script>
+    <script>
+        $(function() {
+            $('#submitInput').click(function() {
+                //发送参数
+                var priorityOne = $("#priorityOne").html();
+                var priorityTwo = $("#priorityTwo").html();
+
+                var dataSourceOne = $("#dataSourceOne").html();
+                var dataSourceTwo = $("#dataSourceTwo").html();
+
+                var forbiddenYN1 = $("#checkboxOne").attr("checked");//通过标签的属性获取属性值，从而获取checkbox是否被选中事件，true为选中，flase代表未选中
+                var forbiddenYN2 = $("#checkboxTwo").attr("checked");
+                window.location.href="/TVListTwo/channelList1.jsp?dataSourceOne="+dataSourceOne+"&dataSourceTwo="+dataSourceTwo+"&forbiddenYN1="+forbiddenYN1+"&forbiddenYN2="+forbiddenYN2;
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="titleDiv"><h3>数据源配置</h3></div>
+<div id="content">
+    <div id="priority">
+        <div id="priorityTitle">优先级(1为最高优先级)</div>
+        <div id="priorityOne">1</div>
+        <div id="priorityTwo">2</div>
+    </div>
+    <div id="dataSource">
+        <div id="dataSourceTitle">数据源(拖动位置可调整优先级)</div>
+        <div id="dataSourceOne" ondrop="drop(event,this)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event, this)">TVSou</div>
+        <div id="dataSourceTwo" ondrop="drop(event,this)" ondragover="allowDrop(event)" draggable="true" ondragstart="drag(event, this)">KanKanTV</div>
+    </div>
+    <div id="forbiddenYN">
+        <div id="forbiddenYNTitle">是否禁用(勾选代表禁用)</div>
+        <div id="forbiddenYN1"><label for="checkboxOne"></label><input type="checkbox" name="checkboxOne" value="yes1" id="checkboxOne" /></div>
+        <div id="forbiddenYN2"><label for="checkboxTwo"></label><input type="checkbox" name="checkboxTwo" value="yes2" id="checkboxTwo" /></div>
+    </div>
+</div>
+<div id="submit">
+    <input type="button" value="提交" id="submitInput">
+</div>
+</body>
+</html>

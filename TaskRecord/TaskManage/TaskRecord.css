@@ -4,7 +4,7 @@
     margin-top: 20px;
     width: 1000px;
     height: 600px;
-    background-color: yellow;
+    background: linear-gradient(#333, #999);;
 }
 .tree_all{
     position:relative;
@@ -12,7 +12,6 @@
     height:100%;
     width:25%;
     overflow: hidden;
-    background-color: #b1c6c1;
 }
 .date_all{
     position: relative;
@@ -20,28 +19,32 @@
     height: 100%;
     width: 75%;
     overflow: auto;
-    background-color: #999999;
 }
 .tree_header{
     position:relative;
     float:top;
-    height:10%;
+    height:40px;
     width:100%;
-    background-color: #80b9c6;
+    border-bottom: 1px #ccc;
+    border-right: 1px #878988;
+    border-right-style: solid;
+    border-bottom-style: outset;
+    background-color: rgba(255, 255, 255,1);
+
 }
 .tree_view{
     position: relative;
-    height: 90%;
+    height: 560px;
     width: 100%;
-    background-color: #fbf9ff;
-    overflow: auto;
+    /*background-color: rgba(61, 59, 79, 0.3);*/
+    overflow: hidden;
 }
 .tree_header_name{
     position: relative;
     margin-left: 10%;
     float:left;
     font-size:16px;
-    color: #4a5563;
+    color: rgba(54, 56, 55, 0.8);
 }
 .tree_header_days_and_add{
     position: absolute;
@@ -49,12 +52,12 @@
     display: inline-block;
     height: 100%;
     width: 24%;
-    color:#0000FF;
+    color: rgba(54, 56, 55, 0.8);
 }
 .tree_header_days{
     display: inline-block;
     font-size:16px;
-    color:#0000FF;
+    color: rgba(54, 56, 55, 0.8);
 }
 /*icon图标样式*/
 .tree_view_icon{
@@ -64,32 +67,33 @@
     background-size: 100%;
 }
 .tree_header_add_icon{
-    background: url("images/ui-icons_444444_256x240.png") -32px -130px no-repeat;
+    background: url("images/ui-icons_222222_256x240.png") -32px -130px no-repeat;
 }
 .tree_plus_icon{
-    background: url("images/ui-icons_444444_256x240.png") -32px -128px no-repeat;
+    background: url("images/ui-icons_ffffff_256x240.png") -32px -128px no-repeat;
 }
 .tree_file_subtract_icon{
-    background: url("images/ui-icons_444444_256x240.png") -16px -192px no-repeat;
+    background: url("images/ui-icons_ffffff_256x240.png") -16px -192px no-repeat;
 }
 .tree_file_plus_icon{
-    background: url("images/ui-icons_444444_256x240.png") -0px -192px no-repeat;
+    background: url("images/ui-icons_ffffff_256x240.png") -0px -192px no-repeat;
 }
 .tree_file_merge_icon{
-    background: url("images/ui-icons_444444_256x240.png") -0px -95px no-repeat;
+    background: url("images/ui-icons_ffffff_256x240.png") -0px -95px no-repeat;
 }
 .tree_file_open_icon{
-    background: url("images/ui-icons_444444_256x240.png") -16px -95px no-repeat;
+    background: url("images/ui-icons_ffffff_256x240.png") -16px -95px no-repeat;
 }
 .tree_view_flag_icon{
-    background: url("images/ui-icons_444444_256x240.png") -16px -112px no-repeat;
+    background: url("images/ui-icons_ffffff_256x240.png") -16px -112px no-repeat;
 }
 /*-------------------------*/
 /*date_header样式框*/
 .date_header{
     display: block;;
-    height: 60px;
+    height: 40px;
     width: 5475px;
+    background-color: rgba(255, 255, 255, 1);
 }
 .date_view{
     display: block;
@@ -100,19 +104,20 @@
     box-sizing: border-box;
     height: 50%;
     width: 100%;
+    text-align: center;
+    color: #363837;
     white-space: nowrap;
 }
 .date_header_month{
     display: inline-block;
-    border-right: 1px crimson;
+    border-right: 1px rgba(135, 137, 136, 0.5);
     width: 450px;
     height: 100%;
-    font-size: 22px;
+    line-height: 1;
+    font-size: 16px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
     border-right-style: outset;
-    border-right-color: #00FF00;
-    border-bottom: 1px crimson;
+    border-bottom: 1px rgba(233, 248, 255, 0.5);
     border-bottom-style: outset;
 }
 .date_header_day_all{
@@ -124,7 +129,7 @@
     display: inline-block;
     height: 100%;
     width: 450px;
-    border-bottom: 1px crimson;
+    border-bottom: 1px rgba(233, 248, 255, 0.5);
     border-bottom-style: outset;
     white-space: nowrap;
 }
@@ -133,18 +138,19 @@
     display: inline-block;
     height: 100%;
     width: 15px;
-    font-size: 2px;
+    color: #363837;
     text-align: center;
-    border-right: 1px #ff7311;
+    font-size: 2px;
+    border-right: 1px rgba(233, 248, 255, 0.5);
     border-right-style: outset;
-    background-color: #878988;
+    /*background-color: rgba(61, 59, 79, 0.5);*/
 }
 .tree_text{
     display: inline-block;
     margin-top: 1px;
     margin-bottom: 1px;
     font-size:12px;
-    color:#0000FF;
+    color: #e9f8ff;
     line-height: 100px; /*设置line-height与父级元素的height相等*/
     text-align: center; /*设置文本水平居中*/
 }
@@ -152,9 +158,8 @@
 .date_view_row{
     height: 20px;
     width: 100%;
-    background-color: #838383;
     white-space: nowrap;
-    border-bottom: 1px #95d9f5;
+    border-bottom: 1px rgba(204, 204, 204, 0.5);
     border-bottom-style: outset;
 
 }
@@ -184,12 +189,12 @@
     height: 19px;
     font-size: 2px;
     text-align: center;
-    background: rgba(90,220,99,0.5);
+    background: rgba(107, 104, 130, 1);
     overflow: hidden;
 
 }
 .sliding_block_background{
-    background:-webkit-linear-gradient(left, transparent 14px, #3d4444 15px);
+    background:-webkit-linear-gradient(left, transparent 14px, #ccc 15px);
     background-size: 15px 19px;
 }
 /*.date_view_day_block_left{*/
@@ -219,19 +224,29 @@
 /*-----------------------------------------------*/
 /*任务菜单行元素*/
 .tree_view_row{
+    position: relative;
     box-sizing: content-box;
     display: block;
+    top: 0;
+    left: 0;
     /*border-bottom: 1px solid #585f68;*/
     /*border-bottom-color: rgb(88, 95, 104);*/
     /*border-right: 1px solid #ff5e79;*/
     /*border-right-color: rgb(255, 94, 121);*/
-    background-color: #878988;
+    /*background-color: #878988;*/
+    background-color: inherit;
     width:249px;
     height:19px;
-    border-bottom: 1px solid #8dc083;
-    border-right: 1px #ff7311;
+    border-bottom: 1px solid rgba(135, 137, 136, 0.5);
+    border-right: 1px rgba(255, 245, 133, 0.5);
     border-right-style:outset;
     /*box-sizing: border-box;*/
+}
+.ui_drop_hover {
+    background-color: #fff585;
+}
+.ui_drop_active {
+    background-color: #b6b8b7
 }
 /*.tree_view_row:hover{*/
 /*    background: #b396ff;*/
@@ -273,15 +288,16 @@
 .tree_view_text{
     position: absolute;
     white-space: nowrap;
-    top: auto;
+    top: 3px;
     width: 60px;
+    color: #e9f8ff;
     display: inline-block;
     align-content: center;
-    font-size: 13px;
+    font-size: 14px;
     overflow: hidden;
 }
 .name_input{
-    color: #9cff9e;
+    color: #363837;
     display:inline-block;
     text-align:center;
     height: 18px ;
@@ -289,7 +305,7 @@
     margin-top: 0;
     z-index: 99999;
     position: absolute;
-    background: #b6b8b7;
+    background: #ffffff;
 }
 .tree_view_row_item_last_icon0{
     float: right;
@@ -301,11 +317,13 @@
 }
 .tree_view_row_item_last_text{
     float: right;
-    margin:auto;
+    margin:2px;
+    width: 20px;
     color: #ffb0d3;
+    text-align: center;
     line-height: 1;
     display: inline-block;
-    font-size: 16px;
+    font-size: 14px;
 }
 .tree_view_row_item_last_icon1{
     float: right;

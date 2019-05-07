@@ -48,6 +48,7 @@ class Add_child_task {
         this.mouse_event();
     }
     append_task() {
+        //ondrop= 'drop(event,this)' ondragover= 'allowDrop(event)' draggable='true' ondragstart='drag(event, this)'
         let tree_view_row ="<div class= 'tree_view_row' id ='"+this.item_id[0]+"'></div>";
         //行开始部分
         let tree_view_row_item_first = "<div class= 'tree_view_row_item_first' id ='"+this.item_id[1]+"'></div>";
@@ -165,8 +166,9 @@ class Add_child_task {
         let year_days = task_date.distance_days(task_date.start_date,task_date.end_date)+1;
         //行div
         let date_view_row = "<div id = '"+ this.row_div_id +"_date'  class = 'date_view_row sliding_block_background'></div>";
+        let date_view = $("#date_view_id");
         if(this.parent_object ===create_Main_task){
-            $("#date_view_id").append(date_view_row);
+            date_view.append(date_view_row);
         }
         else{
             $(date_view_row).insertAfter($("#"+this.date_brother_id));
@@ -196,13 +198,19 @@ class Add_child_task {
         this.div_left = left_days*15;
         this.div_width = days*15;
         this.current_div_left = this.div_left;
-
+        let bar_left = this.div_left;
         let sliding_block = "<div class='date_view_row_block' id ='"+ this.date_id + "_block'></div>";
         let day_block_left = "<div class ='ui-resizable-handle ui-resizable-w' id='" + this.date_id + "_day_block_left' data-of_object= 'that'></div>";
         let day_block_right = "<div class ='ui-resizable-handle ui-resizable-e' id='" + this.date_id + "_day_block_right'></div>";
 
-
-
+        console.log(date_view.scrollLeft());
+        if(this.div_left>=60){
+            bar_left=bar_left -60;
+            $(".date_all").scrollLeft(bar_left);
+        }
+        else{
+            $(".date_all").scrollLeft(bar_left);
+        }
         view_row.append(sliding_block);
         let row_block = $("#" + this.date_id + "_block");
         row_block.append(day_block_left,day_block_right);
@@ -365,39 +373,88 @@ class Add_child_task {
         sliding_block_handle_e.css('right','0');
         current_id.hover(
             function () {
-                current_id.css("background-color","#9ea09f");
-                date_row_id.css("background-color", "#b6b8b7");
+                current_id.css("background-color","#88ada6");
+                date_row_id.css("background-color", "#88ada6");
             },
             function () {
-                current_id.css("background-color","#838383");
-                date_row_id.css("background-color", "#838383");
+                current_id.css("background-color","inherit");
+                date_row_id.css("background-color", "inherit");
             }
         );
-        current_id.draggable ="true";
-        current_id.onselectstart = function(){
-            return false
-        }
-            .ondragstart = function(ev){
-                current_obj1 = this;
-                ev.preventDefault();
-        }
-            .ondragend = function(ev){
-
-        }
-            .ondragover = function(ev){
-
-        }
-            .ondragenter = function(ev){
-
-        }
-            .ondrop = function(ev){
-                ev.preventDefault();
-                print(this);
-                let cur_id = current_obj1.id;
-                current_obj1.id = this.id;
-
-        };
-
+        current_id.draggable({
+            // revert: "invalid",
+            revert:true,
+            helper: "clone",
+            axis:"y",
+            // revertDuration: 200
+        });
+        current_id.droppable({
+            accept: ".tree_view_row",
+            // activeClass: "ui-state-hover",
+            // hoverClass: "ui-state-active",
+            activeClass: "ui_state_active",
+            hoverClass: "ui_drop_hover",
+            drop: function( event, ui ) {
+                let drag_div = ui.draggable, drop_div = $(this);
+                // dragPos = drag_div.position(), dropPos = drop_div.position();
+                let temp_drag = drag_div.children(":first").children(":last").text();
+                let temp_drop = drop_div.children(":first").children(":last").text();
+                drag_div.children(":first").children(":last").text(temp_drop);
+                drop_div.children(":first").children(":last").text(temp_drag);
+                ui.helper.children(":first").children(":last").text(temp_drop);
+            },
+            // deactivate: function (event,ui) {
+            //     let drag_div = ui.draggable, drop_div = $(this);
+            //         // dragPos = drag_div.position(), dropPos = drop_div.position();
+            //     let temp_drag = drag_div.children(":first").children(":last").text();
+            //     let temp_drop = drop_div.children(":first").children(":last").text();
+            //     drag_div.children(":first").children(":last").text(temp_drop);
+            //     drop_div.children(":first").children(":last").text(temp_drag);
+            // }
+        });
+        // function allowDrop(ev) {
+        //     ev.preventDefault();
+        // }
+        // var srcdiv = null;
+        // var temp = null;
+        // //当拖动时触发
+        // function drag(ev, divdom) {
+        //     srcdiv = divdom;
+        //     temp = divdom.innerHTML;
+        // }
+        // //当拖动完后触发 ondragover
+        // function drop(ev, divdom) {
+        //     ev.preventDefault();
+        //     if (srcdiv !== divdom) {
+        //         srcdiv.innerHTML = divdom.innerHTML;
+        //         divdom.innerHTML = temp;
+        //     }
+        // }
+        // current_id.draggable ="true";
+        // current_id.onselectstart = function(){
+        //     return false
+        // }
+        //     .ondragstart = function(ev){
+        //         current_obj1 = this;
+        //         ev.preventDefault();
+        // }
+        //     .ondragend = function(ev){
+        //
+        // }
+        //     .ondragover = function(ev){
+        //
+        // }
+        //     .ondragenter = function(ev){
+        //
+        // }
+        //     .ondrop = function(ev){
+        //         ev.preventDefault();
+        //         print(this);
+        //         let cur_id = current_obj1.id;
+        //         current_obj1.id = this.id;
+        //     srcdiv = divdom;
+        //     temp = divdom.innerHTML;
+        // };
         text_alter.on("dblclick",function(){
             console.log("alter text");
             let inputElement = document.createElement("input");
@@ -422,22 +479,22 @@ class Add_child_task {
             }
 
         });
-        sliding_block_handle_w.hover(
-            function () {
-                sliding_block_handle_w.css("background","rgba(255,10,28)")
-            },
-            function () {
-                sliding_block_handle_w.css("background","rgba(90,220,99,0.5)")
-            }
-        );
-        sliding_block_handle_e.hover(
-            function () {
-                sliding_block_handle_e.css("background","rgba(255,10,28)")
-            },
-            function () {
-                sliding_block_handle_e.css("background","rgba(90,220,99,0.5)")
-            }
-        );
+        // sliding_block_handle_w.hover(
+        //     function () {
+        //         sliding_block_handle_w.css("background","rgba(255,10,28)")
+        //     },
+        //     function () {
+        //         sliding_block_handle_w.css("background","rgba(90,220,99,0.5)")
+        //     }
+        // );
+        // sliding_block_handle_e.hover(
+        //     function () {
+        //         sliding_block_handle_e.css("background","rgba(255,10,28)")
+        //     },
+        //     function () {
+        //         sliding_block_handle_e.css("background","rgba(90,220,99,0.5)")
+        //     }
+        // );
         // row_block.on("dblclick",function(){
         //     let delete_task = $("#delete_task_id");
         //     if(delete_task.is(":hidden")){
@@ -447,6 +504,16 @@ class Add_child_task {
         //     document.getElementById('fade').style.display='block';
         // });
 
+        row_block.hover(
+            function (){
+                sliding_block_handle_w.css("background","rgb(223,255,86)")
+                sliding_block_handle_e.css("background","rgb(223,255,86)")
+            },
+            function () {
+                sliding_block_handle_w.css("background","inherit")
+                sliding_block_handle_e.css("background","inherit")
+            }
+            );
         row_block.draggable({
             create: function (event, ui) {
             },

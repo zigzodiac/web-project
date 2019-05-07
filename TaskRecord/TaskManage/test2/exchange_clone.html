@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        button { display:block; margin:3px; color:red; width:200px; }
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+<h1>Exchange places</h1>
+<ul>
+    <li id="a">a</li>
+    <li id="b">b</li>
+    <li id="c">c</li>
+    <li id="d">d</li>
+</ul>
+<button>exchange 1st,2nd</button>
+<button>exchange 1st,4th</button>
+<button>exchange 2nd,3rd</button>
+<script>
+    $("button:first").click(function() {
+        var cp = $("li:eq(0)").clone();
+        $("li:eq(0)").replaceWith($("li:eq(1)").clone());
+        $("li:eq(1)").replaceWith(cp);
+    });
+    $("button:eq(1)").click(function() {
+        var cp = $("li:eq(0)").clone();
+        $("li:eq(0)").replaceWith($("li:eq(3)").clone());
+        $("li:eq(3)").replaceWith(cp);
+    });
+    $("button:last").click(function() {
+        var cp = $("li:eq(1)").clone();
+        $("li:eq(1)").replaceWith($("li:eq(2)").clone());
+        $("li:eq(2)").replaceWith(cp);
+    });
+</script>
+</body>
+</html>
