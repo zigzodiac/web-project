@@ -4,7 +4,7 @@
     margin-top: 20px;
     width: 1000px;
     height: 600px;
-    background: linear-gradient(#333, #999);;
+    background: linear-gradient(#333, #999);
 }
 .tree_all{
     position:relative;
@@ -29,7 +29,7 @@
     border-right: 1px #878988;
     border-right-style: solid;
     border-bottom-style: outset;
-    background-color: rgba(255, 255, 255,1);
+    background-color: #e9f1f6;
 
 }
 .tree_view{
@@ -68,6 +68,7 @@
 }
 .tree_header_add_icon{
     background: url("images/ui-icons_222222_256x240.png") -32px -130px no-repeat;
+    font-size: 20px;
 }
 .tree_plus_icon{
     background: url("images/ui-icons_ffffff_256x240.png") -32px -128px no-repeat;
@@ -93,7 +94,7 @@
     display: block;;
     height: 40px;
     width: 5475px;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: #e9f1f6;
 }
 .date_view{
     display: block;
@@ -366,67 +367,75 @@
     position: absolute;
     top: 30%;
     left: 200px;
-    width: 300px;
-    height: 243px;
+    width: 400px;
+    height: 232px;
     padding: 1px;
     /*border: 5px solid orange;*/
-    background-color: #7793a7;
+    background: linear-gradient(#333, #999);
     z-index:1002;
     overflow: auto;
     border-radius:15px 15px 15px 15px;
 }
 .property{
+    color: #f3f9f1;
     display: block;
+    padding-left: 10px;
+    padding-top: 5px;
+    background-color: rgba(107, 104, 130, 0.5);
     width: 100%;
     height: 40px;
-    font-size: larger;
+    font-size: 18px;
     align-content: center;
-    background-color: #f1fdfe;
-    border-bottom-width: 2px;
-    border-bottom-color:#0E3E5E;
+    border-radius: 10px 10px 0 0;
 }
 .detail{
     display: block;
     width: 100%;
     height: 40px;
     font-size: medium;
-    background-color: #f1fdfe;
 }
 .task_name{
+    padding-left: 20px;
+    padding-top: 5px;
     display: inline-block;
     width: 100%;
     height: 40px;
     font-size: medium;
-    background-color: #f1fdfe;
 }
 .task_need_time{
+    padding-left: 20px;
+    padding-top: 5px;
     display: inline-block;
     width: 100%;
     height: 40px;
     font-size: medium;
-    background-color: #f1fdfe;
 }
 .add_task_title{
+    color: #f3f9f1;
+    padding-left: 20px;
+    padding-top: 10px;
     display: block;
     top: 0;
     width: 100%;
-    height: 60px;
-    background-color: #4a5563;
-    font-size: larger;
-    color: #f1fdfe;
+    height: 50px;
+    font-family: "Microsoft YaHei", sans-serif;
+    /*background-color: #4a5563;*/
+    font-size: 20px;
 }
 .add_task_detail{
+    margin-left: 25px;
+    background-color: rgba(153,153,153,1);
     display: block;
-    width: 100%;
+    width: 350px;
     height: 120px;
     font-size: medium;
-    background-color: #f1fdfe;
+    border-radius: 15px 15px 15px 15px;
 }
 .add_task_button{
     display: block;
     width: 100%;
     height: 60px;
-    background-color: #4a5563;
+    /*background-color: #4a5563;*/
     font-size: larger;
 }
 .btn_delete{
@@ -435,26 +444,35 @@
     height: 30px;
     margin-left: 20px;
     width: 60px;
-    background-color: #95d9f5;
+    background-color: rgba(153,153,153,1);
     font-size: medium;
 }
 .btn_confirm{
+    margin-left: 150px;
     display: inline-block;
-    margin-top: 10px;
+    top: 10px;
     height: 30px;
-    margin-left: 40px;
+    left: 40px;
     width: 60px;
-    background-color: #95d9f5;
+    background-color: rgba(153,153,153,1);
     font-size: medium;
+    border-radius: 5px 5px 5px 5px
 }
 .btn_cancel{
     display: inline-block;
     margin-top: 10px;
     height: 30px;
     margin-left: 10px;
-    width: 60px;
-    background-color: #95d9f5;
+    width: 70px;
+    background-color: rgba(153,153,153,1);
     font-size: medium;
+    border-radius: 5px 5px 5px 5px
+}
+.input_name{
+    padding-left: 10px;
+}
+.date_choose{
+    padding-left: 10px;
 }
 .popup_dialog{
     background: url('images/hover.png') no-repeat;

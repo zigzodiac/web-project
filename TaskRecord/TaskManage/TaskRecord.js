@@ -49,7 +49,7 @@ class Add_child_task {
     }
     append_task() {
         //ondrop= 'drop(event,this)' ondragover= 'allowDrop(event)' draggable='true' ondragstart='drag(event, this)'
-        let tree_view_row ="<div class= 'tree_view_row' id ='"+this.item_id[0]+"'></div>";
+        let tree_view_row ="<div class= 'tree_view_row' id ='"+this.item_id[0]+"' hierarchies ='"+this.hierarchies+"' obj ='"+global.div_num+"'></div>";
         //行开始部分
         let tree_view_row_item_first = "<div class= 'tree_view_row_item_first' id ='"+this.item_id[1]+"'></div>";
         let tree_view_row_item_first_icon0 = "<div class= 'tree_view_row_item_first_icon0 tree_file_subtract_icon tree_view_icon' id ='"+this.item_id[2]+"'></div>";
@@ -121,6 +121,7 @@ class Add_child_task {
                 delete_task.css('visibility', 'hidden');
                 $("#fade").css("display","block");
                 $("#child_task_id").css("display","block");
+                $("input[id ='child_task_name_id']").focus();
                 let task_need_time=$("#task_need_time_id");
                 if (task_need_time.is(":hidden")){
                     task_need_time.show();
@@ -373,8 +374,8 @@ class Add_child_task {
         sliding_block_handle_e.css('right','0');
         current_id.hover(
             function () {
-                current_id.css("background-color","#88ada6");
-                date_row_id.css("background-color", "#88ada6");
+                current_id.css("background-color","#999");
+                date_row_id.css("background-color", "#999");
             },
             function () {
                 current_id.css("background-color","inherit");
@@ -382,9 +383,10 @@ class Add_child_task {
             }
         );
         current_id.draggable({
+            cursor: "move",
             // revert: "invalid",
             revert:true,
-            helper: "clone",
+            // helper: "clone",
             axis:"y",
             // revertDuration: 200
         });
@@ -396,39 +398,46 @@ class Add_child_task {
             hoverClass: "ui_drop_hover",
             drop: function( event, ui ) {
                 let drag_div = ui.draggable, drop_div = $(this);
-                // dragPos = drag_div.position(), dropPos = drop_div.position();
                 let temp_drag = drag_div.children(":first").children(":last").text();
                 let temp_drop = drop_div.children(":first").children(":last").text();
-                drag_div.children(":first").children(":last").text(temp_drop);
-                drop_div.children(":first").children(":last").text(temp_drag);
-                ui.helper.children(":first").children(":last").text(temp_drop);
+                let drag_time = drag_div.children(":last").children(".tree_view_row_item_last_text").text()*15;
+                let drop_time = drop_div.children(":last").children(".tree_view_row_item_last_text").text()*15;
+                if(drag_div.attr("hierarchies")!==drop_div.attr("hierarchies")){
+                    drag_div.children(":first").children(":last").text(temp_drop);
+                    drop_div.children(":first").children(":last").text(temp_drag);
+                    drop_div.children(":last").children(".tree_view_row_item_last_text").text(drag_time/15);
+                    drag_div.children(":last").children(".tree_view_row_item_last_text").text(drop_time/15);
+                    console.log("11111",global.div_object[drag_div.attr("obj")].div_width);
+                    global.div_object[drag_div.attr("obj")].div_width = drop_time;
+                    global.div_object[drop_div.attr("obj")].div_width = drag_time;
+                    $("#"+global.div_object[drop_div.attr("obj")].date_id+"_block").css("width",drag_time+"px");
+                    $("#"+global.div_object[drag_div.attr("obj")].date_id+"_block").css("width",drop_time+"px");
+                    if(global.div_object[drag_div.attr("obj")].child_object.length>=1){
+                        global.div_object[drag_div.attr("obj")].alter_father_sliding_length();
+                    }
+                    else{
+                        if(global.div_object[drag_div.attr("obj")].parent_object !==create_Main_task){
+                            global.div_object[drag_div.attr("obj")].parent_object.alter_father_sliding_length();
+                        }
+                    }
+                    if(global.div_object[drop_div.attr("obj")].child_object.length>=1){
+                        global.div_object[drop_div.attr("obj")].alter_father_sliding_length();
+                    }
+                    else{
+                        if(global.div_object[drop_div.attr("obj")].parent_object!== create_Main_task){
+                            global.div_object[drag_div.attr("obj")].parent_object.alter_father_sliding_length();
+                        }
+                    }
+                }
+                // dragPos = drag_div.position(), dropPos = drop_div.position();
+                // ui.helper.children(":first").children(":last").text(temp_drop);
             },
             // deactivate: function (event,ui) {
-            //     let drag_div = ui.draggable, drop_div = $(this);
-            //         // dragPos = drag_div.position(), dropPos = drop_div.position();
-            //     let temp_drag = drag_div.children(":first").children(":last").text();
-            //     let temp_drop = drop_div.children(":first").children(":last").text();
-            //     drag_div.children(":first").children(":last").text(temp_drop);
-            //     drop_div.children(":first").children(":last").text(temp_drag);
+            //
             // }
         });
         // function allowDrop(ev) {
         //     ev.preventDefault();
-        // }
-        // var srcdiv = null;
-        // var temp = null;
-        // //当拖动时触发
-        // function drag(ev, divdom) {
-        //     srcdiv = divdom;
-        //     temp = divdom.innerHTML;
-        // }
-        // //当拖动完后触发 ondragover
-        // function drop(ev, divdom) {
-        //     ev.preventDefault();
-        //     if (srcdiv !== divdom) {
-        //         srcdiv.innerHTML = divdom.innerHTML;
-        //         divdom.innerHTML = temp;
-        //     }
         // }
         // current_id.draggable ="true";
         // current_id.onselectstart = function(){
@@ -463,66 +472,43 @@ class Add_child_task {
             inputElement.id = "name_input";
             inputElement.className= "name_input";
             // $("#name_input").css("width","50px").css("height","18px");
-            console.log(inputElement);
+            // console.log(inputElement);
             inputElement.value = this.innerHTML;
             // inputElement.style="maxlength:18px,width:50px";
             //replace div with input
             this.parentNode.replaceChild(inputElement, this);
             let that =this;
-
+            inputElement.focus();
             // 当inputElement失去焦点时触发下面函数，使得input变成div
             inputElement.onblur = function() {
                 //pass input value to div
-               that.innerHTML = inputElement.value;
+                that.innerHTML = inputElement.value;
                 //用原来的div重新替换inputElement
                 inputElement.parentNode.replaceChild(that, inputElement);
-            }
-
+            };
         });
-        // sliding_block_handle_w.hover(
-        //     function () {
-        //         sliding_block_handle_w.css("background","rgba(255,10,28)")
-        //     },
-        //     function () {
-        //         sliding_block_handle_w.css("background","rgba(90,220,99,0.5)")
-        //     }
-        // );
-        // sliding_block_handle_e.hover(
-        //     function () {
-        //         sliding_block_handle_e.css("background","rgba(255,10,28)")
-        //     },
-        //     function () {
-        //         sliding_block_handle_e.css("background","rgba(90,220,99,0.5)")
-        //     }
-        // );
-        // row_block.on("dblclick",function(){
-        //     let delete_task = $("#delete_task_id");
-        //     if(delete_task.is(":hidden")){
-        //         delete_task.css('visibility', 'visible')
-        //     }
-        //     document.getElementById('child_task_id').style.display='block';
-        //     document.getElementById('fade').style.display='block';
-        // });
-
         row_block.hover(
             function (){
-                sliding_block_handle_w.css("background","rgb(223,255,86)")
-                sliding_block_handle_e.css("background","rgb(223,255,86)")
+                sliding_block_handle_w.css("background","rgb(223,255,86)");
+                sliding_block_handle_e.css("background","rgb(223,255,86)");
             },
             function () {
-                sliding_block_handle_w.css("background","inherit")
-                sliding_block_handle_e.css("background","inherit")
+                sliding_block_handle_w.css("background","inherit");
+                sliding_block_handle_e.css("background","inherit");
             }
             );
         row_block.draggable({
+            cursor:"move",
             create: function (event, ui) {
             },
             drag: function (event, ui) {
                 let change_left= ui.position.left - that.div_left;
-                that.div_left = ui.position.left;
+                that.div_left = Math.round(ui.position.left/15)*15;
+                row_block.css("left",that.div_left+"px");
                 if (that.parent_object!==create_Main_task){
                     that.parent_object.alter_father_sliding_length();
                 }
+                change_left = Math.round(change_left/15)*15;
                 that.alter_child_sliding_length_drag(change_left);
             },
             scroll: true,
@@ -534,12 +520,11 @@ class Add_child_task {
 
             }
         });
-
-        let status = true;
         let unchanged_direction = "";
         let changed_ratio=1;
         let unchanged_length = 0;
         row_block.resizable({
+            cursor: "auto",
             create: function( event, ui ) {},
             containment: "parent",
             axis: "x",
@@ -556,22 +541,6 @@ class Add_child_task {
                 // console.log("resize222222222222",ui.size.width);
                 // status = true;
                 // changed_ratio = ui.size.width/that.div_width;
-                // if(that.div_left===ui.position.left){
-                //     unchanged_length = that.div_left;
-                //     unchanged_direction = "left";
-                //     that.alter_child_sliding_length_current_resize(unchanged_direction,unchanged_length,changed_ratio,status)
-                //
-                // }
-                // else{
-                //     unchanged_length = that.div_left+that.div_width;
-                //     unchanged_direction = "right";
-                //     that.alter_child_sliding_length_current_resize(unchanged_direction,unchanged_length,changed_ratio,status)
-                // }
-                // that.current_div_left = ui.position.left;
-                // that.current_div_width = ui.size.width;
-                // if (that.parent_object!==create_Main_task){
-                //     that.parent_object.alter_father_sliding_current_length();
-                // }
             },
             stop: function (event,ui) {
                 changed_ratio = ui.size.width/that.div_width;
