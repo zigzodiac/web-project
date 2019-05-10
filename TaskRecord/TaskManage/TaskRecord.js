@@ -51,7 +51,7 @@ class Add_child_task {
         //ondrop= 'drop(event,this)' ondragover= 'allowDrop(event)' draggable='true' ondragstart='drag(event, this)'
         let tree_view_row ="<div class= 'tree_view_row' id ='"+this.item_id[0]+"' hierarchies ='"+this.hierarchies+"' obj ='"+global.div_num+"'></div>";
         //行开始部分
-        let tree_view_row_item_first = "<div class= 'tree_view_row_item_first' id ='"+this.item_id[1]+"'></div>";
+        let tree_view_row_item_first = "<div class= 'tree_view_row_item_first ' id ='"+this.item_id[1]+"' ></div>";
         let tree_view_row_item_first_icon0 = "<div class= 'tree_view_row_item_first_icon0 tree_file_subtract_icon tree_view_icon' id ='"+this.item_id[2]+"'></div>";
         let tree_view_row_item_first_icon1 = "<div class= 'tree_view_row_item_first_icon1 tree_file_merge_icon tree_view_icon' id ='"+this.item_id[3]+"'></div>";
         let tree_view_row_item_first_text = "<div class='tree_view_text' id='"+this.item_id[4]+"'>"+this.task_name+"</div>";
@@ -113,7 +113,7 @@ class Add_child_task {
         $("#"+this.item_id[5]).append(tree_view_row_item_last_icon1, tree_view_row_item_last_text, tree_view_row_item_last_icon0);
         // console.log("icon_1","#"+this.item_id[8]);
         $("#"+this.item_id[8]).click(function() {
-            if (that.hierarchies>=5){
+            if (that.hierarchies>=4){
                 alert ("目录层级不应超过最大数","The directory level should not exceed the maximum number");
             }
             else{
@@ -204,7 +204,7 @@ class Add_child_task {
         let day_block_left = "<div class ='ui-resizable-handle ui-resizable-w' id='" + this.date_id + "_day_block_left' data-of_object= 'that'></div>";
         let day_block_right = "<div class ='ui-resizable-handle ui-resizable-e' id='" + this.date_id + "_day_block_right'></div>";
 
-        console.log(date_view.scrollLeft());
+        // console.log(date_view.scrollLeft());
         if(this.div_left>=60){
             bar_left=bar_left -60;
             $(".date_all").scrollLeft(bar_left);
@@ -397,38 +397,80 @@ class Add_child_task {
             activeClass: "ui_state_active",
             hoverClass: "ui_drop_hover",
             drop: function( event, ui ) {
+                // console.log(ui.position.left,ui.position.top);
                 let drag_div = ui.draggable, drop_div = $(this);
-                let temp_drag = drag_div.children(":first").children(":last").text();
-                let temp_drop = drop_div.children(":first").children(":last").text();
-                let drag_time = drag_div.children(":last").children(".tree_view_row_item_last_text").text()*15;
-                let drop_time = drop_div.children(":last").children(".tree_view_row_item_last_text").text()*15;
-                if(drag_div.attr("hierarchies")!==drop_div.attr("hierarchies")){
-                    drag_div.children(":first").children(":last").text(temp_drop);
-                    drop_div.children(":first").children(":last").text(temp_drag);
-                    drop_div.children(":last").children(".tree_view_row_item_last_text").text(drag_time/15);
-                    drag_div.children(":last").children(".tree_view_row_item_last_text").text(drop_time/15);
-                    console.log("11111",global.div_object[drag_div.attr("obj")].div_width);
-                    global.div_object[drag_div.attr("obj")].div_width = drop_time;
-                    global.div_object[drop_div.attr("obj")].div_width = drag_time;
-                    $("#"+global.div_object[drop_div.attr("obj")].date_id+"_block").css("width",drag_time+"px");
-                    $("#"+global.div_object[drag_div.attr("obj")].date_id+"_block").css("width",drop_time+"px");
-                    if(global.div_object[drag_div.attr("obj")].child_object.length>=1){
-                        global.div_object[drag_div.attr("obj")].alter_father_sliding_length();
-                    }
-                    else{
-                        if(global.div_object[drag_div.attr("obj")].parent_object !==create_Main_task){
-                            global.div_object[drag_div.attr("obj")].parent_object.alter_father_sliding_length();
-                        }
-                    }
-                    if(global.div_object[drop_div.attr("obj")].child_object.length>=1){
-                        global.div_object[drop_div.attr("obj")].alter_father_sliding_length();
-                    }
-                    else{
-                        if(global.div_object[drop_div.attr("obj")].parent_object!== create_Main_task){
-                            global.div_object[drag_div.attr("obj")].parent_object.alter_father_sliding_length();
+                // let temp_drag = drag_div.children(":first").children(":last").text();
+                // let temp_drop = drop_div.children(":first").children(":last").text();
+                // let drag_time = drag_div.children(":last").children(".tree_view_row_item_last_text").text()*15;
+                // let drop_time = drop_div.children(":last").children(".tree_view_row_item_last_text").text()*15;
+                // if(drag_div.attr("hierarchies")!==drop_div.attr("hierarchies")){
+                //
+                // }
+                let obj_drag = global.div_object[drag_div.attr("obj")];
+                let obj_drop = global.div_object[drop_div.attr("obj")];
+                // if(obj_drag.parent_object !== create_Main_task){
+                //     obj_drag = obj_drag.parent_object;
+                // }
+                // if(obj_drop.parent_object !== create_Main_task ){
+                //     obj_drop= obj_drop.parent_object;
+                // }
+                let level_dis = 0;
+                if (drop_div.attr("hierarchies")>drag_div.attr("hierarchies")){
+                    level_dis = drop_div.attr("hierarchies")-drag_div.attr("hierarchies");
+                    obj_drag = obj_drag.parent_object;
+                }
+                else if (drag_div.attr("hierarchies")>drop_div.attr("hierarchies")){
+                    level_dis = drag_div.attr("hierarchies")-drop_div.attr("hierarchies");
+                    for (let i =0; i<=level_dis;i++){
+                        if ( obj_drop.parent_object!==create_Main_task) {
+                            obj_drop =obj_drop.parent_object;
                         }
                     }
                 }
+                if(obj_drag!==obj_drop){
+                    that.insert_into(global.div_object[drag_div.attr("obj")]);
+                }
+                else{
+                    that.insert_into(global.div_object[drag_div.attr("obj")]);
+                }
+                let child_num = obj_drag.parent_object.child_object.length;
+                let first_child = 0;
+                for (let num= 0; num<child_num;num++){
+                    if (obj_drag.parent_object.child_object[num] === obj_drag){
+                        first_child = num;
+                    }
+                }
+                obj_drag.parent_object.child_object.splice(first_child,1)
+                // if(drag_div.attr("hierarchies")!==drop_div.attr("hierarchies")){
+                //     drag_div.children(":first").children(":last").text(temp_drop);
+                //     drop_div.children(":first").children(":last").text(temp_drag);
+                //     drop_div.children(":last").children(".tree_view_row_item_last_text").text(drag_time/15);
+                //     drag_div.children(":last").children(".tree_view_row_item_last_text").text(drop_time/15);
+                //     // console.log("11111",global.div_object[drag_div.attr("obj")].div_width);
+                //     global.div_object[drag_div.attr("obj")].div_width = drop_time;
+                //     global.div_object[drop_div.attr("obj")].div_width = drag_time;
+                //     $("#"+global.div_object[drop_div.attr("obj")].date_id+"_block").css("width",drag_time+"px");
+                //     $("#"+global.div_object[drag_div.attr("obj")].date_id+"_block").css("width",drop_time+"px");
+                //     if(global.div_object[drag_div.attr("obj")].child_object.length>=1){
+                //         global.div_object[drag_div.attr("obj")].alter_father_sliding_length();
+                //     }
+                //     else{
+                //         if(global.div_object[drag_div.attr("obj")].parent_object !==create_Main_task){
+                //             global.div_object[drag_div.attr("obj")].parent_object.alter_father_sliding_length();
+                //         }
+                //     }
+                //     if(global.div_object[drop_div.attr("obj")].child_object.length>=1){
+                //         global.div_object[drop_div.attr("obj")].alter_father_sliding_length();
+                //     }
+                //     else{
+                //         if(global.div_object[drop_div.attr("obj")].parent_object!== create_Main_task){
+                //             global.div_object[drag_div.attr("obj")].parent_object.alter_father_sliding_length();
+                //         }
+                //     }
+                // }
+                // else{
+                //     console.log(drag_div.position.top,drop_div.position.top);
+                // }
                 // dragPos = drag_div.position(), dropPos = drop_div.position();
                 // ui.helper.children(":first").children(":last").text(temp_drop);
             },
@@ -436,6 +478,9 @@ class Add_child_task {
             //
             // }
         });
+        // current_id.sortable({
+        //
+        // });
         // function allowDrop(ev) {
         //     ev.preventDefault();
         // }
@@ -465,7 +510,6 @@ class Add_child_task {
         //     temp = divdom.innerHTML;
         // };
         text_alter.on("dblclick",function(){
-            console.log("alter text");
             let inputElement = document.createElement("input");
             //get div text value
             inputElement.type ="text";
@@ -504,7 +548,7 @@ class Add_child_task {
             drag: function (event, ui) {
                 let change_left= ui.position.left - that.div_left;
                 that.div_left = Math.round(ui.position.left/15)*15;
-                row_block.css("left",that.div_left+"px");
+                row_block.css("left", Math.round(ui.position.left/15)*15+"px");
                 if (that.parent_object!==create_Main_task){
                     that.parent_object.alter_father_sliding_length();
                 }
@@ -529,7 +573,6 @@ class Add_child_task {
             containment: "parent",
             axis: "x",
             grid: 15,
-            scroll:true,
             // handles:{'w':day_block_left_hover,
             //     "e":day_block_right_hover},
             handles:{
@@ -582,6 +625,37 @@ class Add_child_task {
         //     $(".popup_dialog").animate({opacity: "hide", top: "-85"}, "fast");
         // });
     }
+    insert_into(old_obj){
+        let that =this;
+        if (that.hierarchies!==8){
+            let add_obj = new Add_child_task(that);
+            that.child_object.push(add_obj);
+            that.child_num = that.child_num +1; //child_item中项数 第二项目始为其创建的节点
+            add_obj.div_left = old_obj.div_left;
+            add_obj.div_width = old_obj.div_width;
+            $("#"+add_obj.date_id+"_block").css({
+                left: add_obj.div_left+"px",
+                width: add_obj.div_width+"px",
+            });
+            that.alter_father_sliding_length();
+            let temp = $("#"+old_obj.item_id[4]).text();
+            $("#"+add_obj.item_id[4]).text(temp);
+            global.div_object.push(add_obj);
+            global.div_num = global.div_num+1;
+            if(old_obj.child_object.length>=1){
+                for(let num = 0; num<old_obj.child_object.length; num++){
+                    add_obj.insert_into(old_obj.child_object[num]);
+                }
+            }
+            $("#"+old_obj.row_div_id).remove();
+            $("#"+old_obj.date_id).remove();
+        }
+        else{
+            alert("level can't surpass 20");
+        }
+
+
+    }
     insert_position(){
         let that;
         if(this.child_object.length !== 0){
@@ -604,7 +678,6 @@ class Add_child_task {
         $("#" + this.row_div_id).hide();
         $("#" + this.date_id).hide();
     }
-
     //显示子项D:\FFM_Code\ffm_chat
     child_show(){
         if (this.child_object.length!==0){

@@ -134,6 +134,7 @@ function send_task() {
                         .css("top","-5px")
                         .css("height","10px");
                 }
+                create_Main_task.child_object.push(new_tree_row);
                 that.child_num = that.child_num +1; //child_item中项数 第二项目始为其创建的节点
                 global.task_object = create_Main_task;
                 global.div_object.push(new_tree_row);
@@ -144,8 +145,6 @@ function send_task() {
         }
         task_name.val("");
     }
-
-
 }
 function quit(){
     document.getElementById('child_task_id').style.display='none';
@@ -192,7 +191,9 @@ $(function(){
     initialization();
     add_time_header(task_date);
     $( "#task_date_id" ).daterangepicker();
-
+    // $("#tree_view_id").sortable({
+    //     axis: "x",
+    // });
     $("#tree_header_add_icon_id").click(function () {
         let delete_task = $("#delete_task_id");
         delete_task.css('visibility', 'hidden');
