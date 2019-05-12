@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21881f06-0f25-4f1d-9098-c82d6fe2248f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datebase/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/pythonstudy/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/froms/poemmaker.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/froms/static/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/froms/templates/book.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/froms/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/froms/templates/munged.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/hello_erros.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/studyTornado/string_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/tweet_rate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TaskRecord/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TaskRecord/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TaskRecord/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/pythonstudy/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
@@ -76,28 +64,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/socket.pyi">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="10564">
               <caret line="557" column="8" selection-start-line="557" selection-start-column="8" selection-end-line="557" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/FFM_Python27/Lib/ssl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="710" column="22" lean-forward="true" selection-start-line="710" selection-start-column="22" selection-end-line="710" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/client.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -122,7 +97,6 @@
         <option value="$PROJECT_DIR$/config/__init__py.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/config/__init__.py" />
-        <option value="$PROJECT_DIR$/client/client.py" />
         <option value="$PROJECT_DIR$/server/server.py" />
         <option value="$PROJECT_DIR$/test/serverstring.py" />
         <option value="$PROJECT_DIR$/test/hello_erros.py" />
@@ -145,13 +119,15 @@
         <option value="$PROJECT_DIR$/test/tweet_rate.py" />
         <option value="$PROJECT_DIR$/test/__init__.py" />
         <option value="$PROJECT_DIR$/test/pythonstudy/test.py" />
+        <option value="$PROJECT_DIR$/client/client.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="673" />
-    <option name="width" value="1254" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="366" />
+    <option name="y" value="17" />
+    <option name="width" value="1255" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -165,6 +141,11 @@
             <path>
               <item name="Ftptest" type="b2602c69:ProjectViewProjectNode" />
               <item name="Ftptest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Ftptest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ftptest" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ftptest" type="b2602c69:ProjectViewProjectNode" />
@@ -351,17 +332,17 @@
       <updated>1556261185161</updated>
       <workItem from="1556520128761" duration="5807000" />
       <workItem from="1556530133551" duration="3078000" />
+      <workItem from="1556641950180" duration="34000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8885000" />
+    <option name="totallyTimeSpent" value="8919000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="673" y="0" width="1254" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.27680525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2761394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -443,13 +424,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/FFM_Python27/Lib/os.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="156" selection-start-line="156" selection-end-line="156" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/FFM_Python27/Lib/os.py" />
     <entry file="file://$PROJECT_DIR$/test/studyTornado/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -494,33 +469,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/studyTornado/froms/poemmaker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1065282780/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/pythonstudy/sina.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2019.1/system/python_stubs/-1065282780/__builtin__.py" />
+    <entry file="file://C:/FFM_Python27/Lib/ssl.py" />
     <entry file="file://$PROJECT_DIR$/test/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -535,17 +485,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/pythonstudy/sina.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/socket.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="10564">
           <caret line="557" column="8" selection-start-line="557" selection-start-column="8" selection-end-line="557" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/FFM_Python27/Lib/ssl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="710" column="22" lean-forward="true" selection-start-line="710" selection-start-column="22" selection-end-line="710" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -558,6 +504,19 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/studyTornado/froms/poemmaker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/client.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

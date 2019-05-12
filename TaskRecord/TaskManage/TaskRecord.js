@@ -40,6 +40,7 @@ class Add_child_task {
         this.task_need_time = global.date;
         this.div_left = 0;
         this.div_width = 0;
+        this.child_ids =[];
         this.current_div_left =0;
         this.current_div_width = 0;
         this.append_task();
@@ -389,6 +390,7 @@ class Add_child_task {
             // helper: "clone",
             axis:"y",
             // revertDuration: 200
+            // group: [$("#drag1"),$("#drag2") ]
         });
         current_id.droppable({
             accept: ".tree_view_row",
@@ -433,7 +435,11 @@ class Add_child_task {
                 else{
                     that.insert_into(global.div_object[drag_div.attr("obj")]);
                 }
-                let child_num = obj_drag.parent_object.child_object.length;
+                let child_num = 0;
+                if (obj_drag.parent_object !==null){
+                    child_num= obj_drag.parent_object.child_object.length;
+                }
+
                 let first_child = 0;
                 for (let num= 0; num<child_num;num++){
                     if (obj_drag.parent_object.child_object[num] === obj_drag){
@@ -656,6 +662,16 @@ class Add_child_task {
 
 
     }
+
+    // child_id(obj){
+    //     this.child_ids.push(obj.row_div_id);
+    //     if(obj.child_object !== null){
+    //         for(let num =0; num< old.child_object.length; num++){
+    //             child_id(obj.child_object[num])
+    //         }
+    //     }
+    // }
+    //
     insert_position(){
         let that;
         if(this.child_object.length !== 0){
